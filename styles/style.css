@@ -1,0 +1,1148 @@
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+ 
+/* ==========================================================================
+HTML5 display definitions
+========================================================================== */
+ 
+/*
+* Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+*/
+
+.ga-reviews * {
+    background: transparent;
+    margin: 0;
+    font-weight: auto;
+    font-size: auto;
+    padding: 0;
+
+}
+     
+.ga-reviews article,
+.ga-reviews aside,
+.ga-reviews details,
+.ga-reviews figcaption,
+.ga-reviews figure,
+.ga-reviews footer,
+.ga-reviews header,
+.ga-reviews hgroup,
+.ga-reviews nav,
+.ga-reviews section,
+.ga-reviews summary {
+    display: block;
+}
+ 
+/*
+* Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+*/
+     
+.ga-reviews audio,
+.ga-reviews canvas,
+.ga-reviews video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+     
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+     
+.ga-reviews audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+     
+/*
+.ga-reviews * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+     
+.ga-reviews [hidden] {
+    display: none;
+}
+     
+/* ==========================================================================
+    Base
+    ========================================================================== */
+     
+/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ * `em` units.
+.ga-reviews * 2. Prevents iOS text size adjust after orientation change, without disabling
+ * user zoom.
+ */
+     
+.ga-reviews html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+     
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+     
+.ga-reviews html,
+.ga-reviews button,
+.ga-reviews input,
+.ga-reviews select,
+.ga-reviews textarea {
+    font-family: sans-serif;
+}
+     
+/*
+ * Addresses margins handled incorrectly in IE 6/7.
+ */
+     
+.ga-reviews body {
+    margin: 0;
+}
+     
+/* ==========================================================================
+    Links
+    ========================================================================== */
+     
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+     
+.ga-reviews a:focus {
+    outline: thin dotted;
+}
+     
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+     
+.ga-reviews a:active,
+.ga-reviews a:hover {
+    outline: 0;
+}
+     
+/* ==========================================================================
+    Typography
+    ========================================================================== */
+     
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+.ga-reviews * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+     
+.ga-reviews h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+     
+.ga-reviews h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+     
+.ga-reviews h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+     
+.ga-reviews h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+     
+.ga-reviews h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+     
+.ga-reviews h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+     
+/*
+.ga-reviews * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+     
+.ga-reviews abbr[title] {
+    border-bottom: 1px dotted;
+}
+     
+/*
+.ga-reviews * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+     
+.ga-reviews b,
+.ga-reviews strong {
+    font-weight: bold;
+}
+     
+.ga-reviews blockquote {
+    margin: 1em 40px;
+    padding: 0 !important;
+    font-weight: normal !important;
+    border: none !important;
+    background: transparent !important;
+}
+     
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+     
+.ga-reviews dfn {
+    font-style: italic;
+}
+     
+/*
+ * Addresses styling not present in IE 6/7/8/9.
+ */
+     
+.ga-reviews mark {
+    background: #ff0;
+    color: #000;
+}
+     
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+     
+.ga-reviews p,
+.ga-reviews pre {
+    margin: 1em 0;
+<<<<<<< HEAD
+}
+     
+/*
+.ga-reviews * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+     
+.ga-reviews code,
+.ga-reviews kbd,
+.ga-reviews pre,
+.ga-reviews samp {
+.ga-reviews font-family: monospace, serif;
+.ga-reviews _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+     
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+=======
+    }
+     
+    /*
+.ga-reviews     * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+    */
+     
+    /*
+    * Improves readability of pre-formatted text in all browsers.
+    */
+>>>>>>> 5984eabb1c1fe591ecb4a4096f849a6a673c7063
+     
+.ga-reviews pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+     
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+     
+.ga-reviews q {
+    quotes: none;
+}
+     
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+     
+.ga-reviews q:before,
+.ga-reviews q:after {
+    content: '';
+    content: none;
+}
+     
+.ga-reviews small {
+    font-size: 75%;
+}
+     
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+     
+.ga-reviews sub,
+.ga-reviews sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+     
+.ga-reviews sup {
+    top: -0.5em;
+}
+     
+.ga-reviews sub {
+    bottom: -0.25em;
+}
+     
+/* ==========================================================================
+    Lists
+    ========================================================================== */
+     
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+     
+.ga-reviews dl,
+.ga-reviews menu,
+.ga-reviews ol,
+.ga-reviews ul {
+    margin: 1em 0;
+}
+     
+.ga-reviews dd {
+    margin: 0 0 0 40px;
+}
+     
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+     
+.ga-reviews menu,
+.ga-reviews ol,
+.ga-reviews ul {
+    padding: 0 0 0 40px;
+}
+     
+/*
+ * Corrects list images handled incorrectly in IE 7.
+ */
+     
+.ga-reviews nav ul,
+.ga-reviews nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+     
+/* ==========================================================================
+    Embedded content
+    ========================================================================== */
+     
+/*
+ * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+     
+.ga-reviews img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+     
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+     
+.ga-reviews svg:not(:root) {
+    overflow: hidden;
+}
+     
+/* ==========================================================================
+    Figures
+    ========================================================================== */
+     
+/*
+.ga-reviews * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+     
+.ga-reviews figure {
+    margin: 0;
+}
+     
+/* ==========================================================================
+    Forms
+    ========================================================================== */
+     
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+     
+.ga-reviews form {
+    margin: 0;
+}
+     
+/*
+.ga-reviews * Define consistent border, margin, and padding.
+ */
+     
+.ga-reviews fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+     
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+     
+.ga-reviews legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+     
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+.ga-reviews * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ * and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+     
+.ga-reviews button,
+.ga-reviews input,
+.ga-reviews select,
+.ga-reviews textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+     
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+     
+.ga-reviews button,
+.ga-reviews input {
+    line-height: normal;
+}
+     
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ * and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ * `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ * Known issue: inner spacing remains in IE 6.
+ */
+     
+.ga-reviews button,
+.ga-reviews html input[type="button"], /* 1 */
+.ga-reviews input[type="reset"],
+.ga-reviews input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible; /* 4 */
+}
+     
+/*
+ * Re-set default cursor for disabled elements.
+ */
+     
+.ga-reviews button[disabled],
+.ga-reviews input[disabled] {
+    cursor: default;
+}
+     
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ * Known issue: excess padding remains in IE 6.
+ */
+     
+.ga-reviews input[type="checkbox"],
+.ga-reviews input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+     
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ * (include `-moz` to future-proof).
+ */
+     
+.ga-reviews input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+     
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+     
+.ga-reviews input[type="search"]::-webkit-search-cancel-button,
+.ga-reviews input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+     
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+     
+.ga-reviews button::-moz-focus-inner,
+.ga-reviews input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+     
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+     
+.ga-reviews textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+     
+/* ==========================================================================
+    Tables
+    ========================================================================== */
+     
+/*
+ * Remove most spacing between table cells.
+ */
+     
+.ga-reviews table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*=====================================================================*/
+<<<<<<< HEAD
+/* Widget                                                           */
+=======
+/* ga-reviews                                                          */
+>>>>>>> 5984eabb1c1fe591ecb4a4096f849a6a673c7063
+/*=====================================================================*/
+
+.ga-reviews {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+}
+
+aside.ga-reviews {
+    width: auto !important;
+}
+
+.widget.ga-reviews {
+    padding: 0 !important;
+    margin-top: 23px !important;
+    border-radius: 5px;
+}
+
+.light.ga-reviews {
+    box-shadow: 0px 0px 5px 2px #E9E9E9 !important;
+    border-radius: 5px !important;
+}
+
+.ga-reviews a {
+    border: none;
+}
+
+.ga-reviews a:hover {
+    border: none;
+}
+
+.entry-content .ga-reviews {
+    margin: 10px 20px;
+}
+
+.ga-reviews ul {
+    margin-bottom: 0 !important;
+}
+
+
+/*=====================================================================*/
+/* ga-widget-container                                                 */
+/*=====================================================================*/
+.ga-widget-container.dark {
+	color: white !important;
+	background-color: #1E2326 !important;
+}
+
+.ga-widget-container.light {
+	color: #1E2326 !important;
+	background-color: white !important;
+}
+
+.ga-widget-container.ga-average {
+	font-size: 11pt !important;
+}
+
+.ga-widget-container {
+	font-size: 11pt !important;
+}
+
+.dark.ga-compact .ga-widget-container {
+	border-radius: 5px !important;
+}
+.ga-widget-container {
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/*=====================================================================*/
+/* ga-review-container                                                 */
+/*=====================================================================*/
+.ga-review-container {
+	width: 90% !important;
+	margin: 0 auto !important;
+}
+.ga-compact .ga-review-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.light .ga-review-container .ga-review:last-of-type {
+    border: none;
+}
+.ga-compact .ga-review-container {
+    width: 100% !important;
+}
+
+
+/*=====================================================================*/
+/* ga-review-                                                          */
+/*=====================================================================*/
+.ga-compact .ga-review {
+	height: 250px !important;
+	
+}
+
+.ga-wide .ga-review-average {
+	width: 90% !important;
+	margin: 0 auto !important;
+}
+
+.widget .ga-review-average h3 {
+    padding-top: 0;
+}
+
+.ps-container .ga-review {
+	margin-right: 15px !important;
+}
+
+.ga-compact .ga-review {
+	overflow-y: auto !important;
+	max-height: 250px !important;
+}
+
+.dark .ga-review{
+	border-bottom: 1px solid #666 !important;
+}
+
+.light .ga-review{
+	border-bottom: 1px dotted #1E2326 !important;
+}
+
+.ga-review h2 {
+	text-align: center !important;
+	font-size: 16pt !important;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+	margin: 0 !important;
+	font-weight: 600 !important;
+	margin-top: 0px !important;
+}
+
+.dark .ga-review h2 {
+	color: #ddd !important;
+}
+
+.light .ga-review h2 {
+	color: #1E2326 !important;
+}
+
+.ga-review h2 .ga-note-emphasis {
+	color: #DA3466 !important;
+	font-size: 22pt !important;
+	line-height: 12px !important;
+}
+
+.ga-hide-all {
+	display: none;
+}
+
+.ga-show-all-link, .ga-hide-all-link {
+	font-weight: bold !important;
+	cursor: pointer !important;
+}
+
+.ga-note-hidden {
+	display: none;
+}
+
+.ga-content {
+	font-size: 11pt !important;
+	text-align: center !important;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
+.ga-country img {
+    vertical-align: middle !important;
+    background: none !important;
+}
+
+.ga-review blockquote {
+	width: 100% !important;
+	margin: 0 auto !important;
+	font-style: normal !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+.dark .ga-subcat {
+    color: white;
+}
+
+.dark * {
+    background-color: #1E2326 !important;
+}
+.light .ga-subcat {
+    color: #222;
+}
+
+.ga-review {
+	padding-top: 15px !important;
+}
+
+.ga-comment-short, .ga-comment-full {
+	text-align: justify !important;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+	font-size: 10pt !important;
+}
+
+.dark .ga-comment-short,.dark .ga-comment-full {
+	color: white;
+}
+
+.white .ga-comment-short,.white .ga-comment-full {
+	color: #444;
+}
+
+.ga-comment-short {
+	margin-bottom: 10px !important;
+}
+
+.ga-opening-quote, .ga-closing-quote {
+	color: #DA3466 !important;
+	font-size: 24pt !important;
+	font-weight: bold !important;
+	line-height: 12px !important;
+	font-family: "Garamond", "Georgia", "serif" !important;
+    background: none !important;
+}
+
+.ga-opening-quote {
+	margin-right: 5px !important;
+	position: relative !important;
+	top: 12px !important;
+}
+
+.fa-subratings ul {
+    margin-bottom: 0;
+}
+
+.ga-closing-quote {
+	margin-left: 5px !important;
+	position: relative !important;
+	bottom: -14px !important;
+}
+
+.ga-review-info h3 {
+	font-size: 9pt !important;
+	display: inline-block;
+	margin: 0 !important;
+	color: #ccc !important;
+	font-weight: normal !important;
+}
+
+.light .ga-review-info h3 {
+	color: #1E2326 !important;
+}
+
+.ga-review-info .ga-country img {
+	height: 24px !important;
+}
+
+.ga-review-info {
+	text-align: right !important;
+	font-size: 9pt !important;
+	clear: both !important;
+}
+
+.dark .ga-review-info {
+	color: #ddd !important;
+}
+
+.ga-subratings {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+	font-size: 11pt !important;
+	text-align: right !important;
+}
+
+.ga-subratings ul {
+	list-style-type: none; !important;
+}
+
+.ga-subratings ul, .ga-subratings ul li {
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+
+.ga-subrating {
+	
+	clear: both !important;
+}
+
+.ga-subrating.ga-note-hidden {
+	display: none;
+}
+
+.ga-note-stars {
+	text-align: right !important;
+	float: right !important;
+}
+
+.ga-note {
+	display: inline-block;
+	font-weight: bold !important;
+	color: #DA3466 !important;
+	padding-right: 10px !important;
+}
+
+.ga-subcat {
+	font-weight: bold !important;
+	float: left !important;
+	display: inline-block;
+	text-align: left !important;
+}
+
+.ga-note-stars-global {
+	display: block;
+	margin: 0 auto !important;
+	text-align: center !important;
+}
+
+
+.ga-review-perfectable {
+	position: relative !important;
+	height: 350px !important;
+	overflow-y: hidden !important;
+}
+
+.ga-source {
+	text-align: center !important;
+    border-radius: 8px;
+}
+
+.ga-logo {
+	display: block;
+	margin: 0 auto !important;
+}
+.ga-seal {
+	display: inline-block;
+	float: left !important;
+	margin-left: 30px !important;
+	margin-top: -5px !important;
+}
+
+.ga-seal img {
+	width: 32px !important;
+}
+
+aside .ga-note-stars {
+	font-size: 8pt !important;
+}
+
+/*=====================================================================*/
+/*  Perfect Scrollbar                                               */
+/*=====================================================================*/
+
+.ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-x-rail {
+    display: none !important;
+}
+
+.ps-container .ps-scrollbar-y-rail {
+	margin-top: 10px !important;
+			border-radius: 0 !important;
+	width: 3px !important;
+}
+
+.dark .ps-container .ps-scrollbar-y-rail {
+	background-color: #000 !important;
+	opacity: 1 !important;
+}
+
+.light .ps-container .ps-scrollbar-y-rail {
+	opacity: 1 !important;
+}
+
+.ps-container .ps-scrollbar-y {
+	background-color: #DA3466 !important;
+	width: 3px !important;
+			border-radius: 0 !important;
+	opacity: 1 !important;
+}
+
+/*=====================================================================*/
+/*  Compact widget                                                  */
+/*=====================================================================*/
+.ga-compact.ga-inline-widget {
+	width: 400px !important;
+}
+
+.ga-compact .ga-review {
+	margin-right: 0 !important;
+	border-bottom: none !important;
+}
+
+.dark .liquid-slider {
+	background-color: #1E2326 !important;
+			border-radius: 5px !important;
+}
+
+.ga-review-average h3 {
+	text-align: center !important;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.dark .ga-review-average h3 {
+    color: white;
+}
+
+.light .ga-review-average h3 {
+    color: #222;
+}
+
+.ga-review-average h2 {
+	text-align: center !important;
+	font-size: 16pt !important;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+	margin: 0 !important;
+	font-weight: 600 !important;
+	margin-top: 10px !important;
+	color: #ddd !important;
+}
+
+.light .ga-review-average h2 {
+	color: #1E2326 !important;
+}
+
+.ga-source a {
+    background-color: none;
+}
+
+.ga-wide .ga-note-emphasis {
+	color: #DA3466 !important;
+	font-size: 22pt !important;
+}
+
+.ga-wide.widget .ga-note-emphasis {
+    font-size: 14px !important;
+}
+
+.ga-review-average .ga-show-all, .ga-hide-all {
+    clear: both;
+}
+
+.ga-review-average {
+    border-radius: 8px;
+}
+
+.ga-subratings .ga-note-emphasis {
+    font-size: 18px !important;
+    font-weight: bold;
+    color: #DA3466 !important;
+}
+
+.ga-review-average h2.ga-rate-average-num .ga-note-emphasis {
+    color: #DA3466 !important;
+}
+
+.widget .ga-note-emphasis {
+    font-weight: 16px !important;
+}
+
+.ga-rate-average-stars {
+	display: block;
+	text-align: center !important;
+}
+
+.ga-rate-average-num {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.widget .ga-rate-average-num {
+    font-size: 14px !important;
+}
+
+.dark .ga-rate-average-num {
+    color: white;
+}
+
+.light .ga-rate-average-num {
+    color: #222;
+}
+
+.light .ga-rate-average-stars {
+	color: #1E2326 !important;
+}
+
+.ga-stay-type {
+	display: inline;
+	font-size: 11pt !important;
+}
+
+.ga-stay-count {
+	text-align: center !important;
+	display: block;
+	font-size: 11px !important;
+}
+
+.ls-responsive .liquid-slider {
+	background-color: white !important;
+}
+
+.dark .ls-responsive .liquid-slider {
+	background-color: #1E2326 !important;
+}
+
+.widget li.ga-subrating {
+	padding: 0 !important;
+}
+
+.widget .ga-subcat {
+	font-size: 11px !important;
+}
+
+.widget {
+    padding-top: 10px;
+}
+
+.widget .ga-review-average h3 {
+    padding-top: 15px;
+}
+
+.light .ga-review-average .ga-note-emphasis {
+    color: #DA3466 !important;
+}
+
+.ga-wide.widget h2 .ga-note-emphasis {
+    font-size: 24px !important;
+}
+
+.widget h2 {
+    margin-bottom: 15px;
+    font-size: 16px !important;
+}
+
+/*=====================================================================*/
+/*  Thickbox                                                        */
+/*=====================================================================*/
+
+#TB_ajaxContent {
+	margin: 0 auto !important;
+	height: 90% !important !important;
+}
+
+#guestapp-widget-preview {
+	max-width: 80% !important;
+	padding-bottom: 50px !important;
+}
+
+
+#review-amount {
+	width: 100% !important;
+	display: inline-block;
+}
+
+/*=====================================================================*/
+/*  LiquidSlider                                                    */
+/*=====================================================================*/
+
+aside .panel-wrapper {
+	padding: 15px 10px !important;
+    padding-top: 0 !important;
+}
+
+.arrows .liquid-slider {
+  /* /*Margin between slider and arrows */
+  margin: 0 !important !important;
+}
+
+.panel-wrapper {
+	padding: 15px 5px !important !important;
+    border-radius: 8px;
+}
+
+.ls-wrapper {
+    border-radius: 8px;
+}
+
+[class$="-arrow"] {
+	margin-top: 20px !important !important;
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+
+.ls-responsive .ls-nav-right-arrow, .ls-responsive .ls-nav-left-arrow{
+	bottom: 0 !important;
+}
+
+.ls-responsive .ls-nav-left-arrow {
+    left: 10px !important;
+}
+
+.ls-responsive .ls-nav-right-arrow {
+    right: 10px !important;
+}
+
+.sidebar-name .sidebar-name-arrow {
+	background: none !important;
+}
+
+/*=====================================================================*/
+/*  font-awesome                                                    */
+/*=====================================================================*/
+
+.toggle-box-content {
+	display: none;
+}
+
+.toggle-box {
+	width: 100% !important;
+	border: 1px solid #E9E9E9 !important;
+	background-color: white !important;
+	text-indent: 30px !important;
+}
+
+.toggle-box:hover {
+	cursor: pointer !important;
+}
+
+.toggle-box h3 {
+	display: block;
+	width: 100%;
+	
+	height: 35px;	
+	margin: 0;
+	line-height: 35px !important;
+}

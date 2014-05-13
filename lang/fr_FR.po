@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GuestApp\n"
+"POT-Creation-Date: 2014-04-22 09:41+0100\n"
+"PO-Revision-Date: 2014-04-22 09:42+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../templates/widget_settings.php:18
+msgid "lang"
+msgstr "Langage"
+
+#: ../templates/widget_settings.php:21
+msgid "Tout"
+msgstr "Tout"
+
+#: ../templates/widget_settings.php:22
+msgid "de"
+msgstr "Allemand"
+
+#: ../templates/widget_settings.php:23 ../templates/modal_selector.php:6
+msgid "fr"
+msgstr "Francais"
+
+#: ../templates/widget_settings.php:24
+msgid "en"
+msgstr "Anglais"
+
+#: ../templates/widget_settings.php:25
+msgid "nl"
+msgstr "Néerlandais"
+
+#: ../templates/widget_settings.php:26
+msgid "es"
+msgstr "Espagnol"
+
+#: ../templates/widget.php:8
+msgid "guestapp_seal"
+msgstr "Approuvé par GuestApp"
+
+#: ../templates/widget.php:48 ../templates/widget-overview.php:42
+msgid "see_more"
+msgstr "Voir plus..."
+
+#: ../templates/widget.php:49
+msgid "see_less"
+msgstr "Voir moins..."
+
+#: ../templates/modal_selector.php:5
+msgid "help_empty_alllang"
+msgstr "Laisser vide pour afficher tous les avis dans toutes les langues"
+
+# Reviews categories
+msgid "bedding"
+msgstr "Literie"
+
+msgid "comfort"
+msgstr "Confort"
+
+msgid "infrastructure"
+msgstr "Infrastructure"
+
+msgid "service"
+msgstr "Service"
+
+msgid "valueForMoney"
+msgstr "Rapport qualité/prix"
+
+msgid "cleanliness"
+msgstr "Propreté"
+
+msgid "location"
+msgstr "Emplacement"
+
+msgid "rooms"
+msgstr "Chambres"
+
+msgid "spa"
+msgstr "Spa"
+
+msgid "pool"
+msgstr "Piscine"
+
+msgid "breakfast"
+msgstr "Petit déjeuner"
+
+msgid "atmosphere"
+msgstr "Atmosphere"
+
+msgid "scenery"
+msgstr "Décor"
+
+msgid "cooking"
+msgstr "Cuisine"
+
+msgid "price"
+msgstr "Prix"
+
+msgid "sport"
+msgstr "Sport"
+
+msgid "entertainment"
+msgstr "Divertissement"
+
+msgid "charm"
+msgstr "Charme"
+
+msgid "traiteur"
+msgstr "Traiteur"
+
+msgid "accueil"
+msgstr "Accueil"
+
+msgid "musique"
+msgstr "Musique"
+
+msgid "organisation"
+msgstr "Organisation"
+
+msgid "nourriture"
+msgstr "Nourriture"
+
+msgid "poubelle"
+msgstr "Poubelle"
+
+msgid "last_update"
+msgstr "Dernière mise à jour"
+
+msgid "review"
+msgstr "Avis"
+
+msgid "data"
+msgstr "Données"
+
+msgid "api_token"
+msgstr "Clé secrète d'identification"
+
+msgid "refresh"
+msgstr "Rafraichissement"
+
+msgid "token_desc"
+msgstr "Entrez votre clé (disponible dans <a href='http://admin.guestapp.me'>votre interface d'administration</a>) afin de pouvoir récuperer vos avis depuis GuestApp"
+
+msgid "appearance"
+msgstr "Apparence"
+
+msgid "value_for_money"
+msgstr "Rapport qualité/prix"
+
+msgid "color"
+msgstr "Thème"
+
+msgid "appearance_desc"
+msgstr "Reglez l'apparence des widgets"
+
+msgid "error_api_down"
+msgstr "Impossible de joindre l'API GuestApp"
+
+msgid "force_pull"
+msgstr "Synchroniser les avis maintenant"
+
+msgid "never"
+msgstr "Jamais"
+
+msgid "dark"
+msgstr "Sombre"
+
+msgid "light"
+msgstr "Clair"
+
+msgid "api_token_error"
+msgstr "Votre clé secrète d'identification n'a pas été validée par GuestApp. Veuillez vérifier que vous avez entré la bonne clé. Si le problème persiste, contactez-nous : support @ guestapp.me"
+
+msgid "guestapp_desc"
+msgstr "Affiche des avis provenant de GuestApp"
+
+msgid "invalid_shortcode"
+msgstr "Le shortcode que vous avez utilisé est malformé"
+
+msgid "error_generic"
+msgstr "Impossible de récuperer les avis"
+
+msgid "error_noreview"
+msgstr "Aucun avis pour le moment"
+
+msgid "error_json"
+msgstr "Une erreur est présente dans la réponse"
+
+msgid "review_count"
+msgstr "Nombre d'avis à afficher"
+
+msgid "type"
+msgstr "Type de widget"
+
+msgid "help_empty_allreview"
+msgstr "Nombre d'avis (0 pour voir tous les avis)"
+
+msgid "retrieved_by_guestapp"
+msgstr "Reviews collected by "
+
+msgid "error_review_nan"
+msgstr "Erreur : veuillez entrer un nombre"
+
+msgid "normal"
+msgstr "Normal"
+
+msgid "advanced"
+msgstr "Paramètres avancés"
+
+msgid "compact_widget"
+msgstr "Compact"
+
+msgid "noshow_average"
+msgstr "Ne pas montrer les moyennes"
+
+msgid "average_rate"
+msgstr "Note moyenne"
+
+msgid "insert"
+msgstr "Inserer"
+
+msgid "any"
+msgstr "Tout"
+
+msgid "help_widget_id"
+msgstr "Si vous souhaitez utiliser plusieurs widgets, il est nécessaire de mettre des IDs différents, afin que leurs règles ne rentrent pas en collision."
+
+msgid "widget_id"
+msgstr "Identifiant unique de ce widget"
+
+msgid "title"
+msgstr "Titre"
+
+msgid "family"
+msgstr "En famille"
+
+msgid "solo"
+msgstr "Seul"
+
+msgid "business"
+msgstr "Business"
+
+msgid "friend"
+msgstr "Avec des amis"
+
+msgid "romantic"
+msgstr "Romantique"
+
+msgid "next_update"
+msgstr "Prochaine mise à jour automatique"
+
+msgid "note_visual"
+msgstr "Affichage de la note"
+
+msgid "stars"
+msgstr "Etoiles"
+
+msgid "note"
+msgstr "Nombres"
+
+msgid "both"
+msgstr "Etoiles et nombres"
+
+msgid "reviews5"
+msgstr "5 avis"
+
+msgid "reviews10"
+msgstr "10 avis"
+
+msgid "reviews30"
+msgstr "30 avis"
+
+msgid "reviews50"
+msgstr "50 avis"
+
+msgid "reviews100"
+msgstr "100 avis"
+
+msgid "preview"
+msgstr "Prévisualisation"
+
+msgid "all"
+msgstr "Tous"
