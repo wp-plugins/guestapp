@@ -9,13 +9,20 @@
  * [guestapp] : Displays as many reviews as possible, starting from the latest, using the widget rules
  */
 class GuestApp_Widget extends WP_Widget {
-    /*
+    /**
      * Used to cache the data returned by the database so it doesn't get hit too often by queries.
      * Shared by all the instances
      */
     static $jsonCache = null;
 
-    /*
+    /**
+     * liquid-slider needs different #ids to work properly. We have no way to count the amount 
+     * of widgets in a page. Except that this class is instanciated once per PAGE render
+     * So, we simply increment this once it has been rendered, and all is well.
+     */
+    static $renderCounter = 0;
+    
+    /**
      * Register widget with WordPress.
      */
     function __construct() {
@@ -35,19 +42,21 @@ class GuestApp_Widget extends WP_Widget {
     // Setup & hooks
     //=============================================================================
 
-    /*
+    /**
      * Configures the widget creation form
      */
     public function form($instance) {
+
         // Parsing the form data
         //============================
         $title  = (isset($instance['title'])    ? $instance['title']    : __("review", "guestapp"));
-        $number = (isset($instance['number'])   ? $instance['number']   : rand(1, 64));
+        $number = (isset($instance['number'])   ? $instance['number']   : uniqid()); // Each new widget should have an unique identifier, provided a function in PHP does what it's supposed to do, for once.
         $amount = (isset($instance['amount'])   ? $instance['amount']   : 5);
         $lang   = (isset($instance['lang'])     ? $instance['lang']     : "any");
         $type   = (isset($instance['type'])     ? $instance['type']     : "0");
         $color  = (isset($instance['color'])    ? $instance['color']    : 'light');
         $note   = (isset($instance['note'])     ? $instance['note']     : 'both');
+        $noavg  = (isset($instance['noavg'])    ? $instance['noavg']    : 'off');
 
         $data = array(
             "titleId"       => $this->get_field_id('title'),
@@ -70,13 +79,16 @@ class GuestApp_Widget extends WP_Widget {
             "color"         => esc_attr($color),
             "noteId"        => $this->get_field_id("note"),
             "noteName"      => $this->get_field_name("note"),
-            "note"          => esc_attr($note)
+            "note"          => esc_attr($note),
+            "noavgId"       => $this->get_field_id("noavg"),
+            "noavgName"     => $this->get_field_name("noavg"),
+            "noavg"         => esc_attr($noavg)
         );
 
         print render('templates/widget_settings.php', $data);
     }
 
-    /*
+    /**
      * Once the widget is updated, insert everything into the database
      */
     public function update($new_instance, $old_instance) {
@@ -90,6 +102,7 @@ class GuestApp_Widget extends WP_Widget {
         $instance['type']   = (isset($new_instance['type']  )) ? strip_tags($new_instance['type']  ) : '';
         $instance['color']  = (isset($new_instance['color'] )) ? strip_tags($new_instance['color'] ) : '';
         $instance['note']   = (isset($new_instance['note']  )) ? strip_tags($new_instance['note']  ) : '';
+        $instance['noavg']  = (isset($new_instance['noavg'] )) ? strip_tags($new_instance['noavg'] ) : '';
 
         // Inserting the instance => amount into the database
         $this->insertWidgetProps("amount", $instance['amount'], $instance['number']);
@@ -105,10 +118,17 @@ class GuestApp_Widget extends WP_Widget {
 
         // Setting the widget note display style
         $this->insertWidgetProps("note", $instance['note'], $instance['number']);
+
+
+        $this->insertWidgetProps("noavg", $instance['noavg'], $instance['number']);
         
+
         return $instance;
     }
 
+    /**
+     * Insert $value in the wp_options table at row `guestapp_widget_$number_$prop`
+     */
     function insertWidgetProps($prop, $value, $number) {
         global $wpdb;
 
@@ -124,9 +144,9 @@ class GuestApp_Widget extends WP_Widget {
     // Data related
     //=============================================================================
 
-    /*
+    /**
      * Fills the JSON cache with all the reviews for this user
-     * Also inserts them into the database
+     * This JSON data is the one stored on the server, not the one coming from the API
      */
     function fillCache() {
         // Given by wordpress to access the database.
@@ -144,7 +164,7 @@ class GuestApp_Widget extends WP_Widget {
         }
     }
 
-    /*
+    /**
      *  Generates the overview of the establishment
      */
     private function build_average($params) {
@@ -152,7 +172,8 @@ class GuestApp_Widget extends WP_Widget {
 
         $out = render('templates/widget-overview.php', array("data" => $ga->getAverageData(GuestApp_Widget::$jsonCache),
                                                              "color"=> $params["color"],
-                                                             "note" => $params["note"]
+                                                             "note" => $params["note"],
+                                                             "showSubratings" => $params["showSubratings"]
                                                              ));
 
         return $out;
@@ -161,19 +182,13 @@ class GuestApp_Widget extends WP_Widget {
     /*
      * Generates the user reviews
      * @param $json The data used to build the reviews (which we already got earlier, already filtered)
-     * @param $isSidebarWidget True if this widget was inserted into the sidebar, false otherwise
+     * @param $params Additionnal parameters passed to render()
      */
     private function build_reviews($json, $params = array()) {
         $out  = "";
         $ga   = new GuestApp();
         $data = $ga->getReviewData($json);
 
-        $out .= render('templates/before_widget.php', array("count"  => count($data->data), 
-                                                            "compact"=> $params["compact"],
-                                                            "number" => $params["number"],
-                                                            "color"  => $params["color"],
-                                                            "note"   => $params["note"]
-                                                            ));
         $total = count($data->data);
         $counter = 1;
         foreach ($data->data as $review) {         
@@ -184,19 +199,18 @@ class GuestApp_Widget extends WP_Widget {
                                                          "counter"=> $counter));
             $counter++;
         }
-        $out .= render('templates/after_widget.php', array("color" => $params["color"],
-                                                           "note"  => $params["note"]
-                                                           ));
         return $out;
     }
 
-    /*
+    /**
      * Renders the widget once it is called
      */
     public function widget($args, $instance) {
+
         $ga = new GuestApp();
         // What WP will output once we build it
         $out                = "";
+        GuestApp_Widget::$renderCounter += 1;
 
         //============================================================================
         // Parameters
@@ -205,85 +219,74 @@ class GuestApp_Widget extends WP_Widget {
         $isSidebarWidget    = !isset($instance['from_shortcode']);
         $number      = !isset($instance['number']) ? null                                                : $instance['number'];
         $qty         = !isset($instance['qty'])    ? get_option("guestapp_widget_".$number."_amount", 0) : $instance['qty']; 
-        $noavg       = !isset($instance['noavg'])  ? false                                               : $instance['noavg'];
+        $noavg       = !isset($instance['noavg'])  ? get_option("guestapp_widget_".$number."_noavg", false) : $instance['noavg'];
         $compact     = !isset($instance['compact'])? get_option("guestapp_widget_".$number."_type", "0") : $instance['compact'];
         $lang        = $isSidebarWidget            ? get_option('guestapp_widget_' . $number . "_lang")  : $instance['lang']; 
         $colorscheme = (!isset($instance['color']) ? get_option("guestapp_widget_" . $number . "_color") : $instance['color']);
         $note        = (!isset($instance['note'])  ? get_option("guestapp_widget_" . $number . "_note") : $instance['note']);
-        $compact     = $compact == "1" ? "ga-compact" : "";
-        $id = $compact ? "ga-compact-$number" : "";
+        
+        $class = "";
+        $id = "ga-compact-" . $number;
+
+        $noavg = $noavg == 'on' ? true : false; // Wordpress stores checkboxes as on/off
+
+        $hasErrors = false;
+
+        if ($compact == "1") {
+            if ($isSidebarWidget) {
+                $class = "ga-compact ga-sidebar-widget liquid-slider";
+                $id = 'ga-slider-sidebar-' . $number; 
+            }
+            else {
+                $class = "ga-compact ga-inline-widget";
+                $id = 'ga-slider-' . GuestApp_Widget::$renderCounter;
+            }
+        }
+        else {
+            $class="ga-wide";
+        }
+
         // Getting the reviews, filtered by $lang and $qty if they are set
         $json = $ga->getJSONData($lang, $qty, GuestApp_Widget::$jsonCache);
 
         if ($isSidebarWidget) {
 
-            $out .= "<aside class='ga-reviews widget widget_ga masonry-brick $colorscheme $compact' id='$id'>";
+            $out .= "<aside class='ga-reviews widget widget_ga masonry-brick $colorscheme $class'>";
         }
         else {
-            $out .= "<div class='ga-reviews $colorscheme $compact' id='$compact'>";
+            $out .= "<div class='ga-reviews $colorscheme $class'>";
         }
+
+        $out .= render('templates/before_widget.php', array("count"  => count($json->reviews), 
+                                                            "compact"=> $compact,
+                                                            "number" => $number,
+                                                            "color"  => $colorscheme,
+                                                            "note"   => $note,
+                                                            "sidebar"=> $isSidebarWidget,
+                                                            "counter"=> GuestApp_Widget::$renderCounter,
+                                                            "id"     => $id
+                                                            ));
 
         //============================================================================
         // Contracts 
         //============================================================================
         // Couldn't retrieve the JSON for some reason
         if ($json === null) {
-            $data = array();
-            $out .= render('templates/before_widget.php', array("count"  => 0, 
-                                                            "compact"=> $compact,
-                                                            "number" => $number,
-                                                            "color"  => $colorscheme,
-                                                            "note"   => $note
-                                                            ));
-            $out .= render('templates/error_generic.php', $data);
-            $out .= render('templates/after_widget.php', array("color" => $colorscheme,
-                                                           "note"  => $note
-                                                           ));
-            if ($isSidebarWidget) {
-                echo $out . "</aside>";
-            } else {
-                return $out . "</div>";
-            }
-            return $out;
+            $out .= render('templates/error_generic.php', array());
+    
+            $hasErrors = true;
         }
         // An error occured on the server
         if (isset($json->error)) {
-            $out .= render('templates/before_widget.php', array("count"  => 0, 
-                                                            "compact"=> $compact,
-                                                            "number" => $number,
-                                                            "color"  => $colorscheme,
-                                                            "note"   => $note
-                                                            ));
             $out .= render('templates/error_json.php', $json);
-            $out .= render('templates/after_widget.php', array("color" => $colorscheme,
-                                                           "note"  => $note
-                                                           ));
-            if ($isSidebarWidget) {
-                echo $out . "</aside>";
-            } else {
-                return $out . "</div>";
-            }
-            return $out;
+            
+            $hasErrors = true;
         }
         // No reviews
         if (count($json->reviews) == 0) {
-            $data = array();
-            $out .= render('templates/before_widget.php', array("count"  => 0, 
-                                                            "compact"=> $compact,
-                                                            "number" => $number,
-                                                            "color"  => $colorscheme,
-                                                            "note"   => $note
-                                                            ));
-            $out .= render('templates/error_noreview.php', $data);
-            $out .= render('templates/after_widget.php', array("color" => $colorscheme,
-                                                           "note"  => $note
-                                                           ));
-            if ($isSidebarWidget) {
-                echo $out . "</aside>";
-            } else {
-                return $out . "</div>";
-            }
-            return $out;
+            $out .= render('templates/error_noreview.php', array());
+            
+            $hasErrors = true;
         }
 
         //============================================================================
@@ -292,16 +295,20 @@ class GuestApp_Widget extends WP_Widget {
         // Sidebar widgets are wrapped into an <aside>, shortcode widgets are wrapped into a div
         // Sidebar widgets never render the average
 
-        if (!$noavg && !$compact) {
+        if (!$hasErrors) {
             $out .= $this->build_average(array("color" => $colorscheme,
-                                               "note"  => $note));
+                                               "note"  => $note,
+                                               "showSubratings" => !$noavg));
+            $out .= $this->build_reviews($json, array("compact" => $compact, 
+                                                      "number"  => $number,
+                                                      "color"   => $colorscheme,
+                                                      "note"    => $note,
+                                                      "sidebar" => !isset($instance["from_shortcode"])));
         }
-        $out .= $this->build_reviews($json, array("compact" => $compact === "ga-compact", 
-                                                  "number"  => $number,
-                                                  "color"   => $colorscheme,
-                                                  "note"    => $note));
 
-
+        $out .= render('templates/after_widget.php', array("color" => $colorscheme,
+                                                           "note"  => $note
+                                                           ));
         if ($isSidebarWidget) {
             echo $out . "</aside>";
         } else {
@@ -323,6 +330,7 @@ function register_guestapp_widget() {
     wp_enqueue_style("guestapp-widget-css", plugin_dir_url(__FILE__) . 'styles/style.css');
     wp_enqueue_style("guestapp-liquid-slider-css", plugin_dir_url(__FILE__) . 'styles/liquid-slider.css' );
     wp_enqueue_style("guestapp-fallback", "http://guestapp.me/wp-plugin-fix.css");
+    wp_enqueue_style("font-awesome", "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
     wp_enqueue_script('jquery');
     wp_enqueue_script("jquery-touchswipe", "http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.js", "jquery");
     wp_enqueue_script("jquery-easing", "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js", "jquery" );
@@ -332,7 +340,7 @@ function register_guestapp_widget() {
 }
 add_action('widgets_init', 'register_guestapp_widget' );
 
-/*
+/**
  * Adds a button that allows you to pick a specific language
  * and insert the shortcode into the post
  */
@@ -355,7 +363,7 @@ add_action('media_buttons', 'add_form_button');
 //=============================================================================
 // Shortcode
 //=============================================================================
-/*
+/**
  * Registers the [guestapp] shortcode
  */
 function guestapp_shortcode($atts) {
@@ -388,7 +396,7 @@ function guestapp_shortcode($atts) {
     extract(shortcode_atts($params, $atts, 'guestapp'));
 
     // Error message
-    $error = "<div class='ga-widget-container'<p>" . __('invalid_shortcode', 'guestapp') . "</p></div>";
+    $error = "<div class='ga-widget-container'><h4>Oops !</h4><p>" . __('invalid_shortcode', 'guestapp') . "</p></div>";
 
     if ($id !== null && !is_numeric($id)) {
         return $error;

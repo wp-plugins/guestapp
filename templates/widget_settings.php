@@ -52,11 +52,12 @@
     </label><br>
     <input type="radio" value="0" name="<? echo $typeName ?>" <? echo ($type == "0" ? "checked" : "") ?> >Normal</input>
     <input type="radio" value="1" name="<? echo $typeName ?>" <? echo ($type == "1" ? "checked" : "") ?> >Compact</input><br>
+    <input type="checkbox" <? echo $noavg == 'on' ? "checked" : "" ?> name="<? echo $noavgName ?>"><? _e("noshow_average", "guestapp") ?>
 
-    <div style="display: none">
+    <div style="display: none;">
         <label for="<? echo $numberId ?>" title="<? _e('help_widget_id', 'guestapp') ?>">
             <? _e("widget_id", "guestapp") ?> :
         </label>
-        <input disabled type="number" id="<? echo $numberId ?>" name="<? echo $numberName ?>" value="<? echo $number ?>" /><br>
+        <input disabled class="uuid-input" type="text" id="<? echo $numberId ?>" name="<? echo $numberName ?>" value="<? echo $number ?>" /><br>
     </div>
 </p>

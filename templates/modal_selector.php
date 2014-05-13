@@ -4,7 +4,7 @@
         <div class="lang-selector">
 
             <h3><? _e("lang", "guestapp") ?></h3>
-            <input type="checkbox" id="lang-check-all" name="lang-all" value="all"><label for="lang-check-all"><? _e("all", "guestapp") ?></label>
+            <input type="checkbox" checked id="lang-check-all" name="lang-all" value="all"><label for="lang-check-all"><? _e("all", "guestapp") ?></label>
 
             <input type="checkbox" class="lang-selector" id="lang-check-fr" name="lang-fr" value="fr"><label for="lang-check-fr"><img style="height: 16px; position:relative; top: 4px;" src="<? echo $flagFr ?>"><? _e("fr", "guestapp") ?></label>
 
@@ -48,9 +48,9 @@
             <option value="stars" id="stars"> <? _e("stars", "guestapp") ?></option>
             <option value="both" id="both"> <? _e("both", "guestapp") ?></option>
         </select><br><br>
-        <input type="radio" id="normal" name="display-type"><label for="normal"><?_e("normal", "guestapp")?></label>
-        <input type="radio" id="noshow-averages" name="display-type"><label for="noshow-averages"><?_e("noshow_average", "guestapp")?></label>
-        <input type="radio" id="compact-widget" name="display-type"><label for="compact-widget"><?_e("compact_widget", "guestapp")?></label>
+        <input type="radio" checked id="normal" name="display-type"><label for="normal"><?_e("normal", "guestapp")?></label>
+        <input type="radio" id="compact-widget" name="display-type"><label for="compact-widget"><?_e("compact_widget", "guestapp")?></label><br>
+        <input type="checkbox" id="noshow-averages" name="display-type"><label for="noshow-averages"><?_e("noshow_average", "guestapp")?></label>
 
         <span id="plugin_url" style="display:none"> <? echo plugin_dir_url(__FILE__); ?></span>
 

@@ -78,6 +78,7 @@ class GuestApp {
                 "comment_all"   => isset($review->comment) ? $review->comment : "",
                 "stay_type"     => isset($review->type) ? $review->type : "",
                 "flag"          => strtolower($review->language_code).'.png',
+                "establishment" => $review->establishment_name,
                 "verif_link"    => isset($review->authenticity_url) ? $review->authenticity_url : null
             );
             $composite->data[] = $data;

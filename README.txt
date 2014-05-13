@@ -24,8 +24,3 @@ Vous pouvez maintenant insérer le widget Guest App dans une page (à l'aide du 
 
 == Changelog ==
 
-
-== Arbitrary section ==
-
-
-== A brief Markdown Example ==

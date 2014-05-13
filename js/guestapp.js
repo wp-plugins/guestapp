@@ -3,7 +3,7 @@
 //=============================================================================
 function toggleNotes() {
 	// If visible = true, we want to show the items
-	jQuery('.ga-subrating.ga-note-hidden').toggle(function() {});
+	jQuery('.ga-subrating.ga-note-hidden').toggle();
 	jQuery(".ga-show-global").toggle();
 	jQuery(".ga-hide-global").toggle();
 }
@@ -15,13 +15,12 @@ function toggleSubNotes(id, popup) {
 		jQuery('.ga-show-all-' + id).toggle();
 		jQuery('.ga-hide-all-' + id).toggle();
 
-		jQuery('.ga-review-' + id).toggle(function() {
+		jQuery('.ga-review-' + id).toggle(0, function() {
 			jQuery('.ga-review-perfectable').perfectScrollbar('update');			
 		});
 	}
 	else {
 		var text = jQuery(".ga-review-" + id).parent().parent().html()
-		console.log(text);
 		var w = window.open();
 		jQuery(w.document.body).html(text);
 	}
@@ -103,15 +102,15 @@ function getPreview() {
 	var compact = document.getElementById('compact-widget').checked;
 	var note = document.getElementById('note-visualisation').value;
 
-	var type = compact ? "compact-" : 
-	           noshow ? "noaverage-" : 
-	           "";
+	var isCompact = compact ? "compact-" : "";
+	var isNoShow = noshow ? "noaverage-" : "";
 	var display = note  ? "note-" : 
 				  stars ? "stars-" : 
 				  both ? "both-" : '';
 
 	var imageSrc = pluginRoot + "../images/preview-" + 
-				   type + 
+				   isCompact + 
+				   isNoShow + 
 				   note + "-" + 
 				   color + ".png";
 
@@ -135,6 +134,10 @@ jQuery(document).ready(function() {
 	jQuery(".toggle-box").click(function() {
 		jQuery(this).children('.toggle-box-content').toggle();
 	});
+
+	jQuery('.uuid-input').each(function() {
+		jQuery(this).attr("value", guid());
+	});
 });
 
 jQuery(function(){
@@ -152,3 +155,20 @@ jQuery(function(){
 		}
 	});
 });
+
+// Generates an Unique ID, padded with a number increasing with the amount of uses
+// This is used for the widget settings uniqueid, otherwise, each unique id would be the same
+var guid = (function() {
+  delta = 0;
+  function s4() {
+  	delta++;
+    return Math.floor((1 + Math.random()) * 0x10000)
+               .toString(16)
+               .substring(1);
+  }
+  return function() {
+  	console.log(delta);
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+           s4() + '-' + s4() + s4() + s4() + delta.toString();
+  };
+})();
