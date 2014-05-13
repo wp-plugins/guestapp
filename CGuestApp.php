@@ -6,13 +6,15 @@
  * requests will most likely fail.
  */
 class GuestApp {
+    
     public $APIPath;
     private $token;
 
-    /*
+    /**
      * Constructor for GuestApp
      * Sets up the API Path and the token
      * If no token is provided, the token will be null
+     * @param string $token
      */
     function __construct($token = null) {
         $this->APIPath = "https://admin.guestapp.me/rest/reviews.json?";
@@ -20,8 +22,10 @@ class GuestApp {
         $this->token = $token;
     }
 
-    /*
+    /**
      * Checks if `$token` is a valid GuestApp token
+     * @param string $token
+     * @return boolean
      */
     public function checkToken($token) {
         // Check token against API
@@ -46,7 +50,7 @@ class GuestApp {
         return $this->pullFromAPI(false, 10000000);
     }
 
-        /*
+    /*
      * Compares two subratings by their amount of reviews
      */
     private static function compare_amount($a, $b) {
@@ -57,9 +61,11 @@ class GuestApp {
         return($a->count > $b->count) ? -1 : 1;
     }
 
-    /*
+    /**
      * Gets the review data for presentation
      * From a $json source of data
+     * @param string $json
+     * @return object data
      */
     public function getReviewData($json) {
         $composite = new stdClass();
@@ -88,9 +94,11 @@ class GuestApp {
         return $composite;
     }
 
-    /* 
+    /**
      * Gets the average data for presentation
      * From a $json source of data
+     * @param string $json
+     * @return array data
      */
     public function getAverageData($json) {
         $json = $this->getJSONData(null, null, $json);
@@ -160,13 +168,15 @@ class GuestApp {
         return $data;
     }
 
-    /*
+    /**
      * Returns the data that fits the $lang and $qty parameters
+     * @param string $lang formatted like "fr,en,es"
+     * @param integer $quantity
+     * @param object $original
+     * @return object datas
      */
-    public function getJSONData($lang, $qty, $original = null) {
-        // The widget can set two options related to the content
-        // The first is lang, which defines the language of the reviews
-        // The second is qty, which defines the max amount of reviews shown
+    public function getJSONData($lang, $quantity, $original = null) {
+        // The widget can set two options related to the content. the first is lang, which defines the language of the reviews. The second is quantity, which defines the max amount of reviews shown
         $lang_array = explode(",", $lang);
         $returned = array();
         $count = 0;
@@ -174,35 +184,24 @@ class GuestApp {
         $data = is_object($original) ? clone $original : new stdClass();
 
         if (!isset($data->reviews)) {
-            return null;
-            // No reviews. Stop parsing.
+            return null; // No reviews. Stop parsing.
         }
 
-        // Selecting which reviews will be shown
-        foreach ($data->reviews as $rev) {
-            if ($qty != 0 && $count >= $qty) {
-                // There is a maximum amount of shown reviews, and we've reached it
+        foreach ($data->reviews as $rev) { // Selecting which reviews will be shown
+            if ($quantity != 0 && $count >= $quantity) { // There is a maximum amount of shown reviews, and we've reached it
                 break;
             }
 
-            // One or more language has been set
-            if ($lang !== null && $lang !== "any") {
-                // We recover any language that matches the request
-                if (in_array(strtolower($rev->language_code), $lang_array)) {
+            if ($lang !== null && $lang !== "any") { // One or more language has been set
+                if (in_array(strtolower($rev->language_code), $lang_array)) { // We recover any language that matches the request
                     $returned[] = $rev;
                     $count++;
                 }
-            }
-            else {
-                if ($qty == 0) {
-                    // There is no maximum amount of shown reviews
-                    // We just send the entire data back
+            } else {
+                if ($quantity == 0) { // There is no maximum amount of shown reviews. We just send the entire data back
                     $returned = $data->reviews;
                     break;
-                }
-                else {
-                    // There is a maximum amount
-                    // We simply append, until we reach the maximum
+                } else { // There is a maximum amount. We simply append, until we reach the maximum
                     $returned[] = $rev;
                     $count++;
                 }
@@ -214,12 +213,12 @@ class GuestApp {
         return $data;
     }
 
-    /*
+    /**
      * Pulls reviews from the API
      * Requires `$token` to be set
-     * @param $only_new If set to true, only the unread reviews will be sent.
-     * @param $count The amount of reviews to get
-     * @return An *object* representing the response (not a string)
+     * @param boolean $only_new If set to true, only the unread reviews will be sent.
+     * @param integer $count The amount of reviews to get
+     * @return object the response (not a string)
      */
     private function pullFromAPI($only_new = false, $count = 50000) {
         $query = $this->APIPath;
@@ -229,7 +228,6 @@ class GuestApp {
         if ($this->token != null) {
             $data['access_token'] = $this->token;
         }
-        
         $data['count'] = $count;
 
         $query .= http_build_query($data);

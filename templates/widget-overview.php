@@ -4,13 +4,13 @@
 	<div itemscope itemtype="http://data-vocabulary.org/Review-aggregate" class="ga-review-average">
 		<h3 itemprop="itemreviewed"><? echo $data["establishment_name"] ?></h3>
 		<div class="ga-rate">
-			<meta content="0" itemprop="worst"></meta>
-			<meta content="10" itemprop="best"></meta>
+			<meta content="0" itemprop="worst">
+			<meta content="10" itemprop="best">
 			<? //==================================================================================
 			   // Average rating
 			   //================================================================================== ?>
 			<? if ($note == "both" || $note == "note"): ?>
-				<h2 class="ga-rate-average-num" itemprop="rating"><span class="ga-note-emphasis"><? echo $data["average"] ?></span> / 10</span>
+				<h2 class="ga-rate-average-num" itemprop="rating"><span class="ga-note-emphasis"><? echo $data["average"] ?></span> / 10</h2>
 			<? endif ?>
 
 			<? //==================================================================================
@@ -57,7 +57,7 @@
 					   // See the part about stars before for info as to how it works. It's the same ?>
 					<? $counter = 0; ?>
 	                <? foreach($data['subratings'] as $rating): ?>
-	                	<? if ($counter > 2): ?>
+	                	<? if ($counter > 1): ?>
 	                		<li class="ga-subrating ga-note-hidden">
 	                	<? else: ?>
 	                		<li class="ga-subrating">
@@ -90,11 +90,11 @@
 	                <? endforeach ?>
 	            </ul>
 	            <? // Only show the more/less links if there is more than three reviews ?>
-	            <? if ($counter > 3): ?>
-					<div class="ga-show-all ga-show-all-link ga-show-global" onclick="toggleNotes(true)">
+	            <? if ($counter > 1): ?>
+					<div class="ga-show-all ga-show-all-link ga-show-global" onclick="toggleNotes(jQuery(this))">
 						<? _e("see_more", "guestapp") ?>
 					</div>
-					<div class="ga-hide-all ga-hide-all-link ga-hide-global" onclick="toggleNotes(false)">
+					<div class="ga-hide-all ga-hide-all-link ga-hide-global" onclick="toggleNotes(jQuery(this))">
 						<? _e("see_less", "guestapp") ?>
 					</div>
 				<? endif ?>

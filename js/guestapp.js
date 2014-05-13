@@ -1,23 +1,30 @@
 //=============================================================================
 //= UI Function
 //=============================================================================
-function toggleNotes() {
+function toggleNotes(self) {
+	console.log(self);
+
 	// If visible = true, we want to show the items
-	jQuery('.ga-subrating.ga-note-hidden').toggle();
-	jQuery(".ga-show-global").toggle();
-	jQuery(".ga-hide-global").toggle();
+	self.siblings('ul').children('.ga-subrating.ga-note-hidden').toggle();
+	self.siblings(".ga-show-global").toggle();
+	self.siblings(".ga-hide-global").toggle();
+	self.toggle();
 }
 
-function toggleSubNotes(id, popup) {
+function toggleSubNotes(self, id, popup) {
 	popup = false; // DEBUG
+	console.log(self);
 	if (!popup) {
 		// If visible = true, we want to show the items
-		jQuery('.ga-show-all-' + id).toggle();
-		jQuery('.ga-hide-all-' + id).toggle();
+		self.parent().siblings(".ga-comment-short").toggle();
+		self.parent().siblings(".ga-comment-short").children(".ga-show-all").toggle();
 
-		jQuery('.ga-review-' + id).toggle(0, function() {
-			jQuery('.ga-review-perfectable').perfectScrollbar('update');			
-		});
+		self.parent().siblings(".ga-comment-full").toggle();
+		self.parent().siblings('.ga-comment-full').children(".ga-hide-all").toggle();
+		self.parent().siblings(".ga-subratings").toggle();
+
+		self.parent().toggle();
+		self.toggle();
 	}
 	else {
 		var text = jQuery(".ga-review-" + id).parent().parent().html()
@@ -144,8 +151,8 @@ jQuery(function(){
 	jQuery('.ga-review-container').each(function() {
 		if (jQuery(this).prop('id').indexOf('ga-slider') > -1) {
 			jQuery(this).liquidSlider({
-			   	autoSlide: true,
-			   	autoSlideInterval: 4000,
+			   	//autoSlide: true,
+			   	//autoSlideInterval: 4000,
 				pauseOnHover: true,
 				dynamicTabs: false,
 				hoverArrows: false,

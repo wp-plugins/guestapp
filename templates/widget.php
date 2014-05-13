@@ -6,10 +6,10 @@
        // Those particular properties have to be shown in meta tags, because they are either not shown
        // in the review, or they're not in the right format (like dtreviewed)
     ?>
-    <meta content="0" itemprop="worst"></meta>
-    <meta content="10" itemprop="best"></meta>
-    <meta content="<? echo $review['establishment'] ?>" itemprop="itemreviewed"></meta>
-    <meta content="<? echo date('c', $review['timestamp']) ?>" itemprop="dtreviewed"></meta>
+    <meta content="0" itemprop="worst">
+    <meta content="10" itemprop="best">
+    <meta content="<? echo $review['establishment'] ?>" itemprop="itemreviewed">
+    <meta content="<? echo date('c', $review['timestamp']) ?>" itemprop="dtreviewed">
 
     <? // See rules about stars, notes & both ?>
     <? if ($note == "both" || $note == "note"): ?>
@@ -36,18 +36,18 @@
             <div class="ga-comment-short ga-show-all ga-show-all-<? echo $review["id"] ?>">
                 <? // 'Tis but a dirtey hack. Background images are overrated. ?>
                 <span class='ga-opening-quote'>“</span>
-                <span itemprop="summary"><?  echo $review["comment_short"] ?></span>
+                <span itemprop="summary"><? echo $review["comment_short"] ?></span>
                 
                 <? // Togglers
                    // Open in a popup if we're in compact mode
                    // Show inline if not
                    // (Protip : it's actually disabled in the js, and will always open inline) ?>
                 <? if ($compact): ?>
-                    <span class="ga-show-all ga-show-all-link ga-show-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(<?echo $review["id"] ?>, true)">
+                    <span class="ga-show-all ga-show-all-link ga-show-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(jQuery(this),<?echo $review["id"] ?>, true)">
                         (<? _e("see_more", "guestapp") ?>)
                     </span>
                 <? else: ?>
-                    <span class="ga-show-all ga-show-all-link ga-show-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(<?echo $review["id"] ?>, false)">
+                    <span class="ga-show-all ga-show-all-link ga-show-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(jQuery(this),<?echo $review["id"] ?>, false)">
                         (<? _e("see_more", "guestapp") ?>)
                     </span>
                 <? endif ?>
@@ -62,11 +62,11 @@
                 <span itemprop="description"><? echo $review["comment_all"] ?></span>
                 
                 <? if ($compact): ?>
-                    <span class="ga-hide-all ga-hide-all-link ga-hide-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(<?echo $review["id"] ?>, true)">
+                    <span class="ga-hide-all ga-hide-all-link ga-hide-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(jQuery(this), <?echo $review["id"] ?>, true)">
                         (<? _e("see_less", "guestapp") ?>)
                     </span>
                 <? else: ?>
-                    <span class="ga-hide-all ga-hide-all-link ga-hide-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(<?echo $review["id"] ?>, false)">
+                    <span class="ga-hide-all ga-hide-all-link ga-hide-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(jQuery(this), <?echo $review["id"] ?>, false)">
                         (<? _e("see_less", "guestapp") ?>)
                     </span>
                 <? endif ?>
@@ -105,15 +105,15 @@
                 <? if (!empty($review["verif_link"])): ?>
                     <a target="_blank" href="<? echo $review["verif_link"] ?>">
                         <span class="ga-seal">
-                            <img src='<? echo plugin_dir_url(__FILE__) . '../images/seal.png' ?>'>
+                            <img alt="Guestapp Seal" src='<? echo plugin_dir_url(__FILE__) . '../images/seal.png' ?>'>
                         </span>
                     </a>
                 <? endif ?>
                 <h3 itemprop="reviewer" class="ga-client-name"><? echo $review["user_name"] ?></h3> - 
-                <date><? echo date_i18n("d F Y", $review["timestamp"]) ?></date> - 
+                <div class="date"><? echo date_i18n("d F Y", $review["timestamp"]) ?></div> - 
                 <span class="ga-staytype"><? _e($review["stay_type"], 'guestapp') ?></span> - 
                 <span class="ga-country">
-                    <img src='<? echo plugin_dir_url(__FILE__) . '../images/flag/'.$review["flag"] ?>'>
+                    <img alt="Flag" src='<? echo plugin_dir_url(__FILE__) . '../images/flag/'.$review["flag"] ?>'>
                 </span>
             </div>
         </div>

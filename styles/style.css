@@ -1,21 +1,12 @@
 /*! normalize.css v1.0.0 | MIT License | git.io/normalize */
- 
+     
 /* ==========================================================================
-HTML5 display definitions
-========================================================================== */
- 
+    HTML5 display definitions
+    ========================================================================== */
+     
 /*
-* Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
-*/
-
-.ga-reviews * {
-    background: transparent;
-    margin: 0;
-    font-weight: auto;
-    font-size: auto;
-    padding: 0;
-
-}
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
      
 .ga-reviews article,
 .ga-reviews aside,
@@ -30,10 +21,10 @@ HTML5 display definitions
 .ga-reviews summary {
     display: block;
 }
- 
+     
 /*
-* Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
-*/
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
      
 .ga-reviews audio,
 .ga-reviews canvas,
@@ -84,14 +75,6 @@ HTML5 display definitions
  * Addresses `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-     
-.ga-reviews html,
-.ga-reviews button,
-.ga-reviews input,
-.ga-reviews select,
-.ga-reviews textarea {
-    font-family: sans-serif;
-}
      
 /*
  * Addresses margins handled incorrectly in IE 6/7.
@@ -164,7 +147,7 @@ HTML5 display definitions
      
 /*
 .ga-reviews * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
- */
+*/
      
 .ga-reviews abbr[title] {
     border-bottom: 1px dotted;
@@ -172,7 +155,7 @@ HTML5 display definitions
      
 /*
 .ga-reviews * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
- */
+*/
      
 .ga-reviews b,
 .ga-reviews strong {
@@ -181,10 +164,6 @@ HTML5 display definitions
      
 .ga-reviews blockquote {
     margin: 1em 40px;
-    padding: 0 !important;
-    font-weight: normal !important;
-    border: none !important;
-    background: transparent !important;
 }
      
 /*
@@ -211,36 +190,15 @@ HTML5 display definitions
 .ga-reviews p,
 .ga-reviews pre {
     margin: 1em 0;
-<<<<<<< HEAD
 }
      
 /*
 .ga-reviews * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
- */
-     
-.ga-reviews code,
-.ga-reviews kbd,
-.ga-reviews pre,
-.ga-reviews samp {
-.ga-reviews font-family: monospace, serif;
-.ga-reviews _font-family: 'courier new', monospace;
-    font-size: 1em;
-}
+*/
      
 /*
  * Improves readability of pre-formatted text in all browsers.
  */
-=======
-    }
-     
-    /*
-.ga-reviews     * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
-    */
-     
-    /*
-    * Improves readability of pre-formatted text in all browsers.
-    */
->>>>>>> 5984eabb1c1fe591ecb4a4096f849a6a673c7063
      
 .ga-reviews pre {
     white-space: pre;
@@ -357,7 +315,7 @@ HTML5 display definitions
      
 /*
 .ga-reviews * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
- */
+*/
      
 .ga-reviews figure {
     margin: 0;
@@ -377,7 +335,7 @@ HTML5 display definitions
      
 /*
 .ga-reviews * Define consistent border, margin, and padding.
- */
+*/
      
 .ga-reviews fieldset {
     border: 1px solid #c0c0c0;
@@ -525,11 +483,7 @@ HTML5 display definitions
 }
 
 /*=====================================================================*/
-<<<<<<< HEAD
-/* Widget                                                           */
-=======
 /* ga-reviews                                                          */
->>>>>>> 5984eabb1c1fe591ecb4a4096f849a6a673c7063
 /*=====================================================================*/
 
 .ga-reviews {
@@ -710,7 +664,7 @@ aside.ga-reviews {
     color: white;
 }
 
-.dark * {
+.dark div {
     background-color: #1E2326 !important;
 }
 .light .ga-subcat {
@@ -780,6 +734,11 @@ aside.ga-reviews {
 	height: 24px !important;
 }
 
+.ga-reviews img {
+    box-shadow: none !important;
+    border-radius: 0px !important;
+}
+
 .ga-review-info {
 	text-align: right !important;
 	font-size: 9pt !important;
@@ -833,6 +792,10 @@ aside.ga-reviews {
 	text-align: left !important;
 }
 
+.ga-review-info div {
+    display: inline-block;
+}
+
 .ga-note-stars-global {
 	display: block;
 	margin: 0 auto !important;
@@ -870,8 +833,16 @@ aside .ga-note-stars {
 	font-size: 8pt !important;
 }
 
+.ga-reviews {
+    clear: both;
+}
+
+li.ga-subrating {
+    list-style-type: none;
+}
+
 /*=====================================================================*/
-/*  Perfect Scrollbar                                               */
+/*  Perfect Scrollbar                                                  */
 /*=====================================================================*/
 
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-x-rail {
@@ -901,7 +872,7 @@ aside .ga-note-stars {
 }
 
 /*=====================================================================*/
-/*  Compact widget                                                  */
+/*  Compact widget                                                     */
 /*=====================================================================*/
 .ga-compact.ga-inline-widget {
 	width: 400px !important;
@@ -1055,7 +1026,7 @@ aside .ga-note-stars {
 }
 
 /*=====================================================================*/
-/*  Thickbox                                                        */
+/*  Thickbox                                                           */
 /*=====================================================================*/
 
 #TB_ajaxContent {
@@ -1075,7 +1046,7 @@ aside .ga-note-stars {
 }
 
 /*=====================================================================*/
-/*  LiquidSlider                                                    */
+/*  LiquidSlider                                                       */
 /*=====================================================================*/
 
 aside .panel-wrapper {
@@ -1120,7 +1091,7 @@ aside .panel-wrapper {
 }
 
 /*=====================================================================*/
-/*  font-awesome                                                    */
+/*  font-awesome                                                       */
 /*=====================================================================*/
 
 .toggle-box-content {

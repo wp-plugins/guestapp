@@ -3,8 +3,8 @@
 /*
 Plugin Name: GuestApp
 Plugin URI: http://guestapp.me
-Description: Displays your guestapp.me reviews
-Version: 1.0.1
+Description: GuestApp Plugin
+Version: 1.0.2
 Author: GuestApp
 Author URI: http://guestapp.me
 */
