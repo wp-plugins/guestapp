@@ -21,11 +21,11 @@
         </div>
         <h3><? _e("review_count", "guestapp") ?></h3>
         <select class="widefat" id="review-qty">
-            <option value="5">5 avis</option>
-            <option value="10">10 avis</option>
-            <option value="30">30 avis</option>
-            <option value="50">50 avis</option>
-            <option value="100">100 avis</option>
+            <option value="5"><? _e("reviews5", "guestapp") ?></option>
+            <option value="10"><? _e("reviews10", "guestapp") ?></option>
+            <option value="30"><? _e("reviews30", "guestapp") ?></option>
+            <option value="50"><? _e("reviews50", "guestapp") ?></option>
+            <option value="100"><? _e("reviews100", "guestapp") ?></option>
         </select><br>
         
         <h3><? _e("appearance", "guestapp") ?></h3>

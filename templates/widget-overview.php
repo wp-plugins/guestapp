@@ -56,8 +56,9 @@
 					   // Others get a .ga-note-hidden css class and are shown later through some js
 					   // See the part about stars before for info as to how it works. It's the same ?>
 					<? $counter = 0; ?>
+					<? $maxCount = 3; ?>
 	                <? foreach($data['subratings'] as $rating): ?>
-	                	<? if ($counter > 1): ?>
+	                	<? if ($counter >= $maxCount): ?>
 	                		<li class="ga-subrating ga-note-hidden">
 	                	<? else: ?>
 	                		<li class="ga-subrating">
@@ -90,7 +91,7 @@
 	                <? endforeach ?>
 	            </ul>
 	            <? // Only show the more/less links if there is more than three reviews ?>
-	            <? if ($counter > 1): ?>
+	            <? if ($counter > $maxCount): ?>
 					<div class="ga-show-all ga-show-all-link ga-show-global" onclick="toggleNotes(jQuery(this))">
 						<? _e("see_more", "guestapp") ?>
 					</div>

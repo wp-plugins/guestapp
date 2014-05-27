@@ -39,7 +39,7 @@ msgstr "Spanish"
 
 #: ../templates/widget.php:8
 msgid "guestapp_seal"
-msgstr "Approved by GuestApp"
+msgstr "Approved by Guest App"
 
 #: ../templates/widget.php:48 ../templates/widget-overview.php:42
 msgid "see_more"
@@ -51,7 +51,7 @@ msgstr "See less..."
 
 #: ../templates/modal_selector.php:5
 msgid "help_empty_alllang"
-msgstr "Leave empty to show every review in every language"
+msgstr "Leave empty to display reviews in every language."
 
 # Reviews categories
 msgid "bedding"
@@ -109,7 +109,7 @@ msgid "charm"
 msgstr "Charm"
 
 msgid "traiteur"
-msgstr "Delicatessen"
+msgstr "Traiteur"
 
 msgid "accueil"
 msgstr "Reception"
@@ -126,11 +126,8 @@ msgstr "Food"
 msgid "poubelle"
 msgstr "Trash"
 
-msgid "value_for_money"
-msgstr "Value for money"
-
 msgid "last_update"
-msgstr "Last update"
+msgstr "Last updated"
 
 msgid "review"
 msgstr "Review"
@@ -139,28 +136,31 @@ msgid "data"
 msgstr "Data"
 
 msgid "api_token"
-msgstr "API Token"
+msgstr "Secret identification key"
 
 msgid "refresh"
 msgstr "Refresh"
 
 msgid "token_desc"
-msgstr "Enter your token to be able to retrieve your reviews from GuestApp"
+msgstr "Enter your key (available at <a href='http://admin.guestapp.me'>your administration dashboard</a>) to be able to retrieve your reviews from Guest App."
 
 msgid "appearance"
-msgstr "Appearance"
+msgstr "Appearence"
+
+msgid "value_for_money"
+msgstr "Value for money"
 
 msgid "color"
-msgstr "Colors"
+msgstr "Theme"
 
 msgid "appearance_desc"
-msgstr "Set the appearance of the widget"
+msgstr "Set the appearance of your widgets"
 
 msgid "error_api_down"
-msgstr "Cannot reach the GuestApp API"
+msgstr "Cannot reach the Guest App API."
 
 msgid "force_pull"
-msgstr "Force retrieving the data"
+msgstr "Synchronize reviews now."
 
 msgid "never"
 msgstr "Never"
@@ -171,8 +171,11 @@ msgstr "Dark"
 msgid "light"
 msgstr "Light"
 
+msgid "api_token_error"
+msgstr "Your secret identification key has not been validated by the API. Please check that you have entered the correct secret identification key."
+
 msgid "guestapp_desc"
-msgstr "Show reviews from your GuestApp"
+msgstr "Displays reviews from Guest App"
 
 msgid "invalid_shortcode"
 msgstr "The shortcode you used is malformed"
@@ -181,25 +184,40 @@ msgid "error_generic"
 msgstr "Cannot retrieve the reviews"
 
 msgid "error_noreview"
-msgstr "You don't have any reviews for now"
+msgstr "There are no reviews yet."
 
 msgid "error_json"
-msgstr "An error was found in the response"
+msgstr "There is an error in the server's response."
 
 msgid "review_count"
-msgstr "Amount of reviews"
+msgstr "Amount of reviews to display"
+
+msgid "type"
+msgstr "Widget type"
 
 msgid "help_empty_allreview"
-msgstr "Amount of reviews (0 to see every review)"
+msgstr "Amount of reviews (0 to see all)"
+
+msgid "retrieved_by_guestapp"
+msgstr "Reviews collected by "
 
 msgid "error_review_nan"
 msgstr "Error : please input a number"
 
+msgid "normal"
+msgstr "Normal"
+
+msgid "advanced"
+msgstr "Advanced settings"
+
+msgid "compact_widget"
+msgstr "Compact"
+
 msgid "noshow_average"
-msgstr "I do not wish to show my averages in this widget"
+msgstr "Do not show averages"
 
 msgid "average_rate"
-msgstr "Average rating"
+msgstr "Average rate"
 
 msgid "insert"
 msgstr "Insert"
@@ -208,10 +226,10 @@ msgid "any"
 msgstr "Everything"
 
 msgid "help_widget_id"
-msgstr "If you wish to use multiple sidebar widgets, it is necessary to have two different IDs. Otherwise, their settings will override one another."
+msgstr "THIS SHOULD NOT BE SEEN. You need an unique widget ID."
 
 msgid "widget_id"
-msgstr "Widget ID"
+msgstr "Unique widget ID"
 
 msgid "title"
 msgstr "Title"
@@ -220,7 +238,7 @@ msgid "family"
 msgstr "Family"
 
 msgid "solo"
-msgstr "Alone"
+msgstr "Solo"
 
 msgid "business"
 msgstr "Business"
@@ -231,5 +249,38 @@ msgstr "With friends"
 msgid "romantic"
 msgstr "Romantic"
 
-msgid "api_token_error"
-msgstr "Invalid API token"
+msgid "next_update"
+msgstr "Next automatic update"
+
+msgid "note_visual"
+msgstr "Note display"
+
+msgid "stars"
+msgstr "Stars"
+
+msgid "note"
+msgstr "Numbers"
+
+msgid "both"
+msgstr "Stars & Numbers"
+
+msgid "reviews5"
+msgstr "5 reviews"
+
+msgid "reviews10"
+msgstr "10 reviews"
+
+msgid "reviews30"
+msgstr "30 reviews"
+
+msgid "reviews50"
+msgstr "50 reviews"
+
+msgid "reviews100"
+msgstr "100 reviews"
+
+msgid "preview"
+msgstr "Preview"
+
+msgid "all"
+msgstr "All"

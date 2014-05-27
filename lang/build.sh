@@ -1,4 +1,10 @@
 #!/bin/bash
+echo "Building default.mo ..."
+if msgfmt -o guestapp-default.mo en_EN.po; then
+	echo -e "\e[34mSuccess\e[0m"
+else
+	echo -e "\e[31mError\e[0m"
+fi
 
 echo "Building fr-FR.mo ..."
 if msgfmt -o guestapp-fr_FR.mo fr_FR.po; then

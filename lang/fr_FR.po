@@ -172,7 +172,7 @@ msgid "light"
 msgstr "Clair"
 
 msgid "api_token_error"
-msgstr "Votre clé secrète d'identification n'a pas été validée par GuestApp. Veuillez vérifier que vous avez entré la bonne clé. Si le problème persiste, contactez-nous : support @ guestapp.me"
+msgstr "Votre clé secrete d'identification n'a pas été validé par l'API. Veuillez vérifier que vous avez bien entré le clé secrete d'identification"
 
 msgid "guestapp_desc"
 msgstr "Affiche des avis provenant de GuestApp"
@@ -184,7 +184,7 @@ msgid "error_generic"
 msgstr "Impossible de récuperer les avis"
 
 msgid "error_noreview"
-msgstr "Aucun avis pour le moment"
+msgstr "Il n'y a pas encore d'avis"
 
 msgid "error_json"
 msgstr "Une erreur est présente dans la réponse"
