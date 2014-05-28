@@ -4,7 +4,7 @@
 Plugin Name: GuestApp
 Plugin URI: http://guestapp.me
 Description: GuestApp Plugin
-Version: 1.1.1
+Version: 1.1.2
 Author: GuestApp
 Author URI: http://guestapp.me
 */
@@ -39,8 +39,8 @@ function guestapp_admin_init() {
     register_setting('guestapp-settings-group', 'guestapp_last_data_update', 'guestapp_updatedb' );
     
     // Create the settings sections and input fields
-    add_settings_section('section-one', __("data", "guestapp"), 'section_one_callback', 'guestapp-plugin');
-    add_settings_field('field-one', __("api_token", "guestapp"), 'field_one_callback', 'guestapp-plugin', 'section-one');
+    add_settings_section('section-one', __("Data", "guestapp"), 'section_one_callback', 'guestapp-plugin');
+    add_settings_field('field-one', __("Secret identification key", "guestapp"), 'field_one_callback', 'guestapp-plugin', 'section-one');
 }
 add_action('admin_init', 'guestapp_admin_init');
 
@@ -52,7 +52,7 @@ add_action('admin_init', 'guestapp_admin_init');
  * API Token help message
  */
 function section_one_callback() {
-    _e("token_desc", "guestapp");
+    _e("Enter your key (available at <a href='http://admin.guestapp.me'>your administration dashboard</a>) to be able to retrieve your reviews from Guest App.", "guestapp");
 }
 
 /*
@@ -71,12 +71,12 @@ function field_force_refresh_callback() {
     /**/
 
     echo "<div class='toggle-box'>";
-    echo "<h3>" . __('advanced', 'guestapp') . "</h3>";
+    echo "<h3>" . __('Advanced settings', 'guestapp') . "</h3>";
     echo "<div class='toggle-box-content'>";
     echo "<input type='checkbox' id='toggle' class='disguise' name='guestapp_last_data_update'>";
-    echo "<em><label for='toggle'>" . __('force_pull', 'guestapp') . '</label></em><br>';
-    echo "<em>" . __('last_update', 'guestapp'). " : " . ($lastUpdated ? date_i18n("l d F Y, H:i:s", $lastUpdated) : __('never', 'guestapp'));
-    echo "<br><em>" . __('next_update', 'guestapp'). ' : ' . date_i18n("l d F Y, H:i:s", wp_next_scheduled('cron_refresh_db')) . "</em>";
+    echo "<em><label for='toggle'>" . __('Synchronize reviews now.', 'guestapp') . '</label></em><br>';
+    echo "<em>" . __('Last updated', 'guestapp'). " : " . ($lastUpdated ? date_i18n("l d F Y, H:i:s", $lastUpdated) : __('never', 'guestapp'));
+    echo "<br><em>" . __('Next automatic update', 'guestapp'). ' : ' . date_i18n("l d F Y, H:i:s", wp_next_scheduled('cron_refresh_db')) . "</em>";
     echo "</div></div>";
     
 }
@@ -94,7 +94,7 @@ function guestapp_sanitize($input) {
         if ($valid) {
             $new_input = $input;
         } else {
-            $message = __('api_token_error', 'guestapp');
+            $message = __('Your secret identification key has not been validated by the API. Please check that you have entered the correct secret identification key.', 'guestapp');
             $type = 'error';
             add_settings_error(
                 'guestapp-wrong-token',
@@ -116,7 +116,7 @@ function guestapp_updatedb($input) {
         $data = "Woohoo";
         
         if (!$success) {
-            $message = __('error_api_down', 'guestapp');
+            $message = __('Cannot reach the Guest App API.', 'guestapp');
             $type = 'error';
             add_settings_error(
                 'guestapp-api-down',

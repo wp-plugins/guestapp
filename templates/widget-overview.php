@@ -42,7 +42,7 @@
 			<? //==================================================================================
 			   // Review count
 			   //==================================================================================  ?>
-			<em class="ga-stay-count">(<span itemprop="count"><?echo $data['count'] ?></span> <? _e("review", "guestapp") ?> )</em>
+			<em class="ga-stay-count">(<span itemprop="count"><?echo $data['count'] ?></span> <? _e("Review", "guestapp") ?> )</em>
 		</div>
 		<? //==================================================================================
 		   // List of subratings
@@ -55,8 +55,8 @@
 					   // Also, only the first three subnotes are shown by default
 					   // Others get a .ga-note-hidden css class and are shown later through some js
 					   // See the part about stars before for info as to how it works. It's the same ?>
-					<? $counter = 0; ?>
-					<? $maxCount = 3; ?>
+					<? $counter = 0; 
+					   $maxCount = 3; ?>
 	                <? foreach($data['subratings'] as $rating): ?>
 	                	<? if ($counter >= $maxCount): ?>
 	                		<li class="ga-subrating ga-note-hidden">
@@ -93,10 +93,10 @@
 	            <? // Only show the more/less links if there is more than three reviews ?>
 	            <? if ($counter > $maxCount): ?>
 					<div class="ga-show-all ga-show-all-link ga-show-global" onclick="toggleNotes(jQuery(this))">
-						<? _e("see_more", "guestapp") ?>
+						<? _e("See more...", "guestapp") ?>
 					</div>
 					<div class="ga-hide-all ga-hide-all-link ga-hide-global" onclick="toggleNotes(jQuery(this))">
-						<? _e("see_less", "guestapp") ?>
+						<? _e("See less...", "guestapp") ?>
 					</div>
 				<? endif ?>
 			<? endif ?>

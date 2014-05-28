@@ -1,6 +1,7 @@
 <?php
-
-/*
+// Moi c'est Bob. Quand je commit, ca casse.
+// Et quand je recommit, ca casse pas.
+/**
  * GuestApp service utilities
  * Almost every function expects `$token` to be set. If it is not,
  * requests will most likely fail.
@@ -19,6 +20,7 @@ class GuestApp {
     function __construct($token = null) {
         $this->APIPath = "https://admin.guestapp.me/rest/reviews.json?";
         //$this->APIPath = "http://guestapp.dev/app_dev.php/rest/reviews.json?"; // DEBUG
+        // Et quand je commit ici, ca casse probablement
         $this->token = $token;
     }
 
@@ -42,7 +44,7 @@ class GuestApp {
         return $isValid;
     }
 
-    /*
+    /**
      * Retrieves all the reviews for this token from the API as a json_decoded object
      * Requires `$token` to be set.
      */
@@ -50,7 +52,7 @@ class GuestApp {
         return $this->pullFromAPI(false, 10000000);
     }
 
-    /*
+    /**
      * Compares two subratings by their amount of reviews
      */
     private static function compare_amount($a, $b) {

@@ -44,11 +44,11 @@
                    // (Protip : it's actually disabled in the js, and will always open inline) ?>
                 <? if ($compact): ?>
                     <span class="ga-show-all ga-show-all-link ga-show-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(jQuery(this),<?echo $review["id"] ?>, true)">
-                        (<? _e("see_more", "guestapp") ?>)
+                        (<? _e("See more...", "guestapp") ?>)
                     </span>
                 <? else: ?>
                     <span class="ga-show-all ga-show-all-link ga-show-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(jQuery(this),<?echo $review["id"] ?>, false)">
-                        (<? _e("see_more", "guestapp") ?>)
+                        (<? _e("See more...", "guestapp") ?>)
                     </span>
                 <? endif ?>
                 
@@ -63,11 +63,11 @@
                 
                 <? if ($compact): ?>
                     <span class="ga-hide-all ga-hide-all-link ga-hide-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(jQuery(this), <?echo $review["id"] ?>, true)">
-                        (<? _e("see_less", "guestapp") ?>)
+                        (<? _e("See less...", "guestapp") ?>)
                     </span>
                 <? else: ?>
                     <span class="ga-hide-all ga-hide-all-link ga-hide-all-<? echo $review["id"] ?>" onclick="toggleSubNotes(jQuery(this), <?echo $review["id"] ?>, false)">
-                        (<? _e("see_less", "guestapp") ?>)
+                        (<? _e("See less...", "guestapp") ?>)
                     </span>
                 <? endif ?>
 

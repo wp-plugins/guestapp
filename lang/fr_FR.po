@@ -10,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../templates/widget_settings.php:18
-msgid "lang"
+msgid "Language"
 msgstr "Langage"
 
 #: ../templates/widget_settings.php:21
@@ -18,23 +18,23 @@ msgid "Tout"
 msgstr "Tout"
 
 #: ../templates/widget_settings.php:22
-msgid "de"
+msgid "German"
 msgstr "Allemand"
 
 #: ../templates/widget_settings.php:23 ../templates/modal_selector.php:6
-msgid "fr"
+msgid "French"
 msgstr "Francais"
 
 #: ../templates/widget_settings.php:24
-msgid "en"
+msgid "English"
 msgstr "Anglais"
 
 #: ../templates/widget_settings.php:25
-msgid "nl"
+msgid "Dutch"
 msgstr "Néerlandais"
 
 #: ../templates/widget_settings.php:26
-msgid "es"
+msgid "Spanish"
 msgstr "Espagnol"
 
 #: ../templates/widget.php:8
@@ -42,11 +42,11 @@ msgid "guestapp_seal"
 msgstr "Approuvé par GuestApp"
 
 #: ../templates/widget.php:48 ../templates/widget-overview.php:42
-msgid "see_more"
+msgid "See more..."
 msgstr "Voir plus..."
 
 #: ../templates/widget.php:49
-msgid "see_less"
+msgid "See less..."
 msgstr "Voir moins..."
 
 #: ../templates/modal_selector.php:5
@@ -59,6 +59,9 @@ msgstr "Literie"
 
 msgid "comfort"
 msgstr "Confort"
+
+msgid "There are no reviews to display."
+msgstr "Aucun avis à afficher."
 
 msgid "infrastructure"
 msgstr "Infrastructure"
@@ -126,112 +129,100 @@ msgstr "Nourriture"
 msgid "poubelle"
 msgstr "Poubelle"
 
-msgid "last_update"
+msgid "Reviews collected by "
+msgstr "Avis collectés par "
+
+msgid "Last updated"
 msgstr "Dernière mise à jour"
 
-msgid "review"
+msgid "Review"
 msgstr "Avis"
 
-msgid "data"
+msgid "Data"
 msgstr "Données"
 
-msgid "api_token"
+msgid "Secret identification key"
 msgstr "Clé secrète d'identification"
 
-msgid "refresh"
+msgid "Refresh"
 msgstr "Rafraichissement"
 
-msgid "token_desc"
+msgid "Enter your key (available at <a href='http://admin.guestapp.me'>your administration dashboard</a>) to be able to retrieve your reviews from Guest App."
 msgstr "Entrez votre clé (disponible dans <a href='http://admin.guestapp.me'>votre interface d'administration</a>) afin de pouvoir récuperer vos avis depuis GuestApp"
 
-msgid "appearance"
+msgid "Appearance"
 msgstr "Apparence"
 
 msgid "value_for_money"
 msgstr "Rapport qualité/prix"
 
-msgid "color"
+msgid "Theme"
 msgstr "Thème"
 
-msgid "appearance_desc"
+msgid "Set the appearance of your widgets"
 msgstr "Reglez l'apparence des widgets"
 
-msgid "error_api_down"
+msgid "Cannot reach the Guest App API."
 msgstr "Impossible de joindre l'API GuestApp"
 
-msgid "force_pull"
+msgid "Synchronize reviews now."
 msgstr "Synchroniser les avis maintenant"
 
-msgid "never"
+msgid "Never"
 msgstr "Jamais"
 
-msgid "dark"
+msgid "Dark"
 msgstr "Sombre"
 
-msgid "light"
+msgid "Light"
 msgstr "Clair"
 
-msgid "api_token_error"
-msgstr "Votre clé secrete d'identification n'a pas été validé par l'API. Veuillez vérifier que vous avez bien entré le clé secrete d'identification"
+msgid "Your secret identification key has not been validated by the API. Please check that you have entered the correct secret identification key."
+msgstr "Votre clé secrète d'identification n'a pas été validée par l'API. Veuillez vérifier que vous avez bien entré la clé secrète d'identification"
 
-msgid "guestapp_desc"
+msgid "Displays reviews from Guest App"
 msgstr "Affiche des avis provenant de GuestApp"
 
-msgid "invalid_shortcode"
+msgid "The shortcode you used is malformed"
 msgstr "Le shortcode que vous avez utilisé est malformé"
 
-msgid "error_generic"
+msgid "Cannot retrieve the reviews."
 msgstr "Impossible de récuperer les avis"
 
-msgid "error_noreview"
-msgstr "Il n'y a pas encore d'avis"
+msgid "There are no reviews yet."
+msgstr "Il n'y a pas encore d'avis."
 
-msgid "error_json"
-msgstr "Une erreur est présente dans la réponse"
+msgid "There is an error in the server's response."
+msgstr "Une erreur est présente dans la réponse du serveur"
 
-msgid "review_count"
+msgid "Amount of reviews to show"
 msgstr "Nombre d'avis à afficher"
 
-msgid "type"
+msgid "Widget type"
 msgstr "Type de widget"
 
-msgid "help_empty_allreview"
-msgstr "Nombre d'avis (0 pour voir tous les avis)"
-
-msgid "retrieved_by_guestapp"
-msgstr "Reviews collected by "
-
-msgid "error_review_nan"
-msgstr "Erreur : veuillez entrer un nombre"
-
-msgid "normal"
+msgid "Normal"
 msgstr "Normal"
 
-msgid "advanced"
-msgstr "Paramètres avancés"
+msgid "Advanced settings"
+msgstr "Paramétres avancés"
 
-msgid "compact_widget"
+msgid "Compact"
 msgstr "Compact"
 
-msgid "noshow_average"
+msgid "Do not show averages"
 msgstr "Ne pas montrer les moyennes"
 
-msgid "average_rate"
+msgid "Average note"
 msgstr "Note moyenne"
 
-msgid "insert"
+msgid "Insert"
 msgstr "Inserer"
 
-msgid "any"
+msgid "Everything"
 msgstr "Tout"
 
-msgid "help_widget_id"
-msgstr "Si vous souhaitez utiliser plusieurs widgets, il est nécessaire de mettre des IDs différents, afin que leurs règles ne rentrent pas en collision."
-
-msgid "widget_id"
-msgstr "Identifiant unique de ce widget"
-
-msgid "title"
+msgid "Title"
 msgstr "Titre"
 
 msgid "family"
@@ -249,38 +240,35 @@ msgstr "Avec des amis"
 msgid "romantic"
 msgstr "Romantique"
 
-msgid "next_update"
-msgstr "Prochaine mise à jour automatique"
+msgid "Next automatic update"
+msgstr "Prochaine mise Ã  jour automatique"
 
-msgid "note_visual"
+msgid "Note display"
 msgstr "Affichage de la note"
 
-msgid "stars"
+msgid "Stars"
 msgstr "Etoiles"
 
-msgid "note"
+msgid "Note"
 msgstr "Nombres"
 
-msgid "both"
+msgid "Notes & Stars"
 msgstr "Etoiles et nombres"
 
-msgid "reviews5"
+msgid "5 reviews"
 msgstr "5 avis"
 
-msgid "reviews10"
+msgid "10 reviews"
 msgstr "10 avis"
 
-msgid "reviews30"
+msgid "30 reviews"
 msgstr "30 avis"
 
-msgid "reviews50"
+msgid "50 reviews"
 msgstr "50 avis"
 
-msgid "reviews100"
+msgid "100 reviews"
 msgstr "100 avis"
 
-msgid "preview"
+msgid "Preview"
 msgstr "Prévisualisation"
-
-msgid "all"
-msgstr "Tous"

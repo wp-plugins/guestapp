@@ -33,7 +33,7 @@ class GuestApp_Widget extends WP_Widget {
         parent::__construct(
             'guestapp_widget', // Base ID
             'GuestApp', // Name
-            array('description' => __('guestapp_desc', 'guestapp')) // Args
+            array('description' => __('Displays reviews from GuestApp', 'guestapp')) // Args
         );
 
     }
@@ -49,7 +49,7 @@ class GuestApp_Widget extends WP_Widget {
 
         // Parsing the form data
         //============================
-        $title  = (isset($instance['title'])    ? $instance['title']    : __("review", "guestapp"));
+        $title  = (isset($instance['title'])    ? $instance['title']    : __("Review", "guestapp"));
         $number = (isset($instance['number'])   ? $instance['number']   : uniqid()); // Each new widget should have an unique identifier, provided a function in PHP does what it's supposed to do, for once.
         $amount = (isset($instance['amount'])   ? $instance['amount']   : 5);
         $lang   = (isset($instance['lang'])     ? $instance['lang']     : "any");
@@ -396,7 +396,7 @@ function guestapp_shortcode($atts) {
     extract(shortcode_atts($params, $atts, 'guestapp'));
 
     // Error message
-    $error = "<div class='ga-widget-container'><h4>Oops !</h4><p>" . __('invalid_shortcode', 'guestapp') . "</p></div>";
+    $error = "<div class='ga-widget-container'><h4>Oops !</h4><p>" . __('The shortcode you used is malformed', 'guestapp') . "</p></div>";
 
     if ($id !== null && !is_numeric($id)) {
         return $error;

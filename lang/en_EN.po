@@ -2,16 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GuestApp\n"
 "POT-Creation-Date: 2014-04-22 09:41+0100\n"
-"PO-Revision-Date: 2014-04-22 09:42+0100\n"
+"PO-Revision-Date: 2014-05-28 11:19+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../templates/widget_settings.php:18
 msgid "lang"
-msgstr "Language"
+msgstr "lang"
 
 #: ../templates/widget_settings.php:21
 msgid "Tout"
@@ -39,7 +40,7 @@ msgstr "Spanish"
 
 #: ../templates/widget.php:8
 msgid "guestapp_seal"
-msgstr "Approved by Guest App"
+msgstr "Approved by GuestApp"
 
 #: ../templates/widget.php:48 ../templates/widget-overview.php:42
 msgid "see_more"
@@ -51,7 +52,7 @@ msgstr "See less..."
 
 #: ../templates/modal_selector.php:5
 msgid "help_empty_alllang"
-msgstr "Leave empty to display reviews in every language."
+msgstr "Leave empty to show every review in every language"
 
 # Reviews categories
 msgid "bedding"
@@ -109,7 +110,7 @@ msgid "charm"
 msgstr "Charm"
 
 msgid "traiteur"
-msgstr "Traiteur"
+msgstr "Delicatessen"
 
 msgid "accueil"
 msgstr "Reception"
@@ -126,8 +127,11 @@ msgstr "Food"
 msgid "poubelle"
 msgstr "Trash"
 
+msgid "value_for_money"
+msgstr "Value for money"
+
 msgid "last_update"
-msgstr "Last updated"
+msgstr "Last update"
 
 msgid "review"
 msgstr "Review"
@@ -136,31 +140,28 @@ msgid "data"
 msgstr "Data"
 
 msgid "api_token"
-msgstr "Secret identification key"
+msgstr "API Token"
 
 msgid "refresh"
 msgstr "Refresh"
 
 msgid "token_desc"
-msgstr "Enter your key (available at <a href='http://admin.guestapp.me'>your administration dashboard</a>) to be able to retrieve your reviews from Guest App."
+msgstr "Enter your token to be able to retrieve your reviews from GuestApp"
 
 msgid "appearance"
-msgstr "Appearence"
-
-msgid "value_for_money"
-msgstr "Value for money"
+msgstr "Appearance"
 
 msgid "color"
-msgstr "Theme"
+msgstr "Colors"
 
 msgid "appearance_desc"
-msgstr "Set the appearance of your widgets"
+msgstr "Set the appearance of the widget"
 
 msgid "error_api_down"
-msgstr "Cannot reach the Guest App API."
+msgstr "Cannot reach the GuestApp API"
 
 msgid "force_pull"
-msgstr "Synchronize reviews now."
+msgstr "Force retrieving the data"
 
 msgid "never"
 msgstr "Never"
@@ -171,11 +172,8 @@ msgstr "Dark"
 msgid "light"
 msgstr "Light"
 
-msgid "api_token_error"
-msgstr "Your secret identification key has not been validated by the API. Please check that you have entered the correct secret identification key."
-
 msgid "guestapp_desc"
-msgstr "Displays reviews from Guest App"
+msgstr "Show reviews from your GuestApp"
 
 msgid "invalid_shortcode"
 msgstr "The shortcode you used is malformed"
@@ -184,40 +182,25 @@ msgid "error_generic"
 msgstr "Cannot retrieve the reviews"
 
 msgid "error_noreview"
-msgstr "There are no reviews yet."
+msgstr "You don't have any reviews for now"
 
 msgid "error_json"
-msgstr "There is an error in the server's response."
+msgstr "An error was found in the response"
 
 msgid "review_count"
-msgstr "Amount of reviews to display"
-
-msgid "type"
-msgstr "Widget type"
+msgstr "Amount of reviews"
 
 msgid "help_empty_allreview"
-msgstr "Amount of reviews (0 to see all)"
-
-msgid "retrieved_by_guestapp"
-msgstr "Reviews collected by "
+msgstr "Amount of reviews (0 to see every review)"
 
 msgid "error_review_nan"
 msgstr "Error : please input a number"
 
-msgid "normal"
-msgstr "Normal"
-
-msgid "advanced"
-msgstr "Advanced settings"
-
-msgid "compact_widget"
-msgstr "Compact"
-
 msgid "noshow_average"
-msgstr "Do not show averages"
+msgstr "I do not wish to show my averages in this widget"
 
 msgid "average_rate"
-msgstr "Average rate"
+msgstr "Average rating"
 
 msgid "insert"
 msgstr "Insert"
@@ -226,10 +209,12 @@ msgid "any"
 msgstr "Everything"
 
 msgid "help_widget_id"
-msgstr "THIS SHOULD NOT BE SEEN. You need an unique widget ID."
+msgstr ""
+"If you wish to use multiple sidebar widgets, it is necessary to have two "
+"different IDs. Otherwise, their settings will override one another."
 
 msgid "widget_id"
-msgstr "Unique widget ID"
+msgstr "Widget ID"
 
 msgid "title"
 msgstr "Title"
@@ -238,7 +223,7 @@ msgid "family"
 msgstr "Family"
 
 msgid "solo"
-msgstr "Solo"
+msgstr "Alone"
 
 msgid "business"
 msgstr "Business"
@@ -249,38 +234,5 @@ msgstr "With friends"
 msgid "romantic"
 msgstr "Romantic"
 
-msgid "next_update"
-msgstr "Next automatic update"
-
-msgid "note_visual"
-msgstr "Note display"
-
-msgid "stars"
-msgstr "Stars"
-
-msgid "note"
-msgstr "Numbers"
-
-msgid "both"
-msgstr "Stars & Numbers"
-
-msgid "reviews5"
-msgstr "5 reviews"
-
-msgid "reviews10"
-msgstr "10 reviews"
-
-msgid "reviews30"
-msgstr "30 reviews"
-
-msgid "reviews50"
-msgstr "50 reviews"
-
-msgid "reviews100"
-msgstr "100 reviews"
-
-msgid "preview"
-msgstr "Preview"
-
-msgid "all"
-msgstr "All"
+msgid "api_token_error"
+msgstr "Invalid API token"
