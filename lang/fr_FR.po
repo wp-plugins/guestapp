@@ -2,12 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GuestApp\n"
 "POT-Creation-Date: 2014-04-22 09:41+0100\n"
-"PO-Revision-Date: 2014-04-22 09:42+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2014-05-30 15:28+0100\n"
+"Last-Translator: Florian Eula <florian@guestapp.me>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../templates/widget_settings.php:18
 msgid "Language"
@@ -48,10 +49,6 @@ msgstr "Voir plus..."
 #: ../templates/widget.php:49
 msgid "See less..."
 msgstr "Voir moins..."
-
-#: ../templates/modal_selector.php:5
-msgid "help_empty_alllang"
-msgstr "Laisser vide pour afficher tous les avis dans toutes les langues"
 
 # Reviews categories
 msgid "bedding"
@@ -147,8 +144,14 @@ msgstr "Clé secrète d'identification"
 msgid "Refresh"
 msgstr "Rafraichissement"
 
-msgid "Enter your key (available at <a href='http://admin.guestapp.me'>your administration dashboard</a>) to be able to retrieve your reviews from Guest App."
-msgstr "Entrez votre clé (disponible dans <a href='http://admin.guestapp.me'>votre interface d'administration</a>) afin de pouvoir récuperer vos avis depuis GuestApp"
+msgid ""
+"Enter your key (available at <a href='http://admin.guestapp.me'>your "
+"administration dashboard</a>) to be able to retrieve your reviews from Guest "
+"App."
+msgstr ""
+"Entrez votre clé (disponible dans <a href='http://admin.guestapp.me'>votre "
+"interface d'administration</a>) afin de pouvoir récuperer vos avis depuis "
+"GuestApp"
 
 msgid "Appearance"
 msgstr "Apparence"
@@ -177,8 +180,12 @@ msgstr "Sombre"
 msgid "Light"
 msgstr "Clair"
 
-msgid "Your secret identification key has not been validated by the API. Please check that you have entered the correct secret identification key."
-msgstr "Votre clé secrète d'identification n'a pas été validée par l'API. Veuillez vérifier que vous avez bien entré la clé secrète d'identification"
+msgid ""
+"Your secret identification key has not been validated by the API. Please "
+"check that you have entered the correct secret identification key."
+msgstr ""
+"Votre clé secrète d'identification n'a pas été validée par l'API. Veuillez "
+"vérifier que vous avez bien entré la clé secrète d'identification"
 
 msgid "Displays reviews from Guest App"
 msgstr "Affiche des avis provenant de GuestApp"
@@ -205,7 +212,7 @@ msgid "Normal"
 msgstr "Normal"
 
 msgid "Advanced settings"
-msgstr "Paramétres avancés"
+msgstr "Paramètres avancés"
 
 msgid "Compact"
 msgstr "Compact"
@@ -241,7 +248,7 @@ msgid "romantic"
 msgstr "Romantique"
 
 msgid "Next automatic update"
-msgstr "Prochaine mise Ã  jour automatique"
+msgstr "Prochaine mise à jour automatique"
 
 msgid "Note display"
 msgstr "Affichage de la note"
@@ -272,3 +279,6 @@ msgstr "100 avis"
 
 msgid "Preview"
 msgstr "Prévisualisation"
+
+msgid "Average rate on"
+msgstr "Note moyenne sur"

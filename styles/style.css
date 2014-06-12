@@ -8,539 +8,48 @@ HTML5 display definitions
 * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
 */
 
+/****************************************************************************************
+ ** CSS Reset
+ ** Please use the following elements *only* in the templates : 
+ **  * span
+ **  * div
+ **  * i (font-awesome)
+ **  * p
+ **  * aside (in the case of a sidebar widget)
+ **  * img
+ ** 
+ ** Every other element can (and will) be overriden by the site's local CSS
+ ** If problems persist, inline styles shall be used (and honestly, noone wants that)
+ ** 
+ ** TODO : Override every possible property !important;
+ ***************************************************************************************/
 
-
-.ga-reviews article,
-.ga-reviews aside,
-.ga-reviews details,
-.ga-reviews figcaption,
-.ga-reviews figure,
-.ga-reviews footer,
-.ga-reviews header,
-.ga-reviews hgroup,
-.ga-reviews nav,
-.ga-reviews section,
-.ga-reviews summary {
-    display: block;
-}
-
-/*
-* Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
-*/
-
-
-.ga-reviews audio,
-.ga-reviews canvas,
-.ga-reviews video {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-}
-
-
-/*
-* Prevents modern browsers from displaying `audio` without controls.
-* Remove excess height in iOS 5 devices.
-*/
-
-.ga-reviews audio:not([controls]) {
-    display: none;
-    height: 0;
-}
-
-
-/*
-.ga-reviews * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
-* and Safari 4.
-* Known issue: no IE 6 support.
-*/
-
-.ga-reviews [hidden] {
-    display: none;
-}
-
-
-/* ==========================================================================
-Base
-========================================================================== */
-
-/*
-* 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
-* `em` units.
-.ga-reviews * 2. Prevents iOS text size adjust after orientation change, without disabling
-* user zoom.
-*/
-
-
-
-.ga-reviews html {
-    font-size: 100%; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
-}
-
-
-/*
-* Addresses `font-family` inconsistency between `textarea` and other form
-* elements.
-*/
-
-/*
-* Addresses margins handled incorrectly in IE 6/7.
-*/
-
-.ga-reviews body {
-    margin: 0;
-}
-
-
-/* ==========================================================================
-Links
-========================================================================== */
-
-/*
-* Addresses `outline` inconsistency between Chrome and other browsers.
-*/
-
-.ga-reviews a:focus {
-    outline: thin dotted;
-}
-
-/*
-* Improves readability when focused and also mouse hovered in all browsers.
-*/
-
-.ga-reviews a:active,
-.ga-reviews a:hover {
-    outline: 0;
-}
-
-
-/* ==========================================================================
-Typography
-========================================================================== */
-
-/*
-* Addresses font sizes and margins set differently in IE 6/7.
-.ga-reviews * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
-* and Chrome.
-*/
-     
-.ga-reviews h1,
-.ga-reviews h2,
-.ga-reviews h3,
-.ga-reviews h4,
-.ga-reviews h5{
+ /* Also overrides div.ga-reviews, aside.ga-reviews */
+.ga-reviews, .ga-reviews div {
     border: none !important;
-    width: auto !important;
     padding: 0 !important;
+    margin: 0 !important;   
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif !important;
+    box-shadow: none !important;
 }
 
-.ga-reviews h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+.ga-reviews p {
+    border: none !important; 
+    margin: 0 !important;   
+    box-shadow: none !important;
 }
 
-.ga-reviews h2 {
-    font-size: 1.5em;
-    margin: 0.83em 0;
-}
-
-.ga-reviews h3 {
-    font-size: 1.17em;
-    margin: 1em 0;
-}
-
-.ga-reviews h4 {
-    font-size: 1em;
-    margin: 1.33em 0;
-}
-
-.ga-reviews h5 {
-    font-size: 0.83em;
-    margin: 1.67em 0;
-}
-
-.ga-reviews h6 {
-    font-size: 0.75em;
-    margin: 2.33em 0;
-}
-
-/*
-.ga-reviews * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
-*/
-
-.ga-reviews abbr[title] {
-    border-bottom: 1px dotted;
-}
-
-/*
-.ga-reviews * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
-*/
-
-.ga-reviews b,
-.ga-reviews strong {
-    font-weight: bold;
-}
-
-.ga-reviews blockquote {
-    margin: 1em 40px;
-}
-
-/*
-* Addresses styling not present in Safari 5 and Chrome.
-*/
-
-.ga-reviews dfn {
-    font-style: italic;
-}
-
-/*
-* Addresses styling not present in IE 6/7/8/9.
-*/
-
-.ga-reviews mark {
-    background: #ff0;
-    color: #000;
-}
-
-/*
-* Addresses margins set differently in IE 6/7.
-*/
-
-.ga-reviews p,
-.ga-reviews pre {
-    margin: 1em 0;
-}
-
-
-/*
-.ga-reviews * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
-*/
-
-/*
-* Improves readability of pre-formatted text in all browsers.
-*/
-
-
-
-.ga-reviews pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
-/*
-* Addresses CSS quotes not supported in IE 6/7.
-*/
-
-.ga-reviews q {
-    quotes: none;
-}
-
-/*
-* Addresses `quotes` property not supported in Safari 4.
-*/
-
-
-.ga-reviews q:before,
-.ga-reviews q:after {
-    content: '';
-    content: none;
-}
-
-.ga-reviews small {
-    font-size: 75%;
-}
-
-/*
-* Prevents `sub` and `sup` affecting `line-height` in all browsers.
-*/
-
-
-.ga-reviews sub,
-.ga-reviews sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-.ga-reviews sup {
-    top: -0.5em;
-}
-
-.ga-reviews sub {
-    bottom: -0.25em;
-}
-
-
-/* ==========================================================================
-Lists
-========================================================================== */
-
-/*
-* Addresses margins set differently in IE 6/7.
-*/
-
-
-
-.ga-reviews dl,
-.ga-reviews menu,
-.ga-reviews ol,
-.ga-reviews ul {
-    margin: 1em 0;
-    width: auto !important;
+.ga-reviews span {
 
 }
 
-.ga-reviews dd {
-    margin: 0 0 0 40px;
+.ga-reviews i {
+
 }
-
-/*
-* Addresses paddings set differently in IE 6/7.
-*/
-
-
-.ga-reviews menu,
-.ga-reviews ol,
-.ga-reviews ul {
-    padding: 0 0 0 40px;
-}
-
-/*
-* Corrects list images handled incorrectly in IE 7.
-*/
-
-
-.ga-reviews nav ul,
-.ga-reviews nav ol {
-    list-style: none;
-    list-style-image: none;
-}
-
-
-/* ==========================================================================
-Embedded content
-========================================================================== */
-
-/*
-* 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
-* 2. Improves image quality when scaled in IE 7.
-*/
 
 .ga-reviews img {
-    border: 0; /* 1 */
-    -ms-interpolation-mode: bicubic; /* 2 */
-}
+    box-shadow: none !important;
 
-/*
-* Corrects overflow displayed oddly in IE 9.
-*/
-
-.ga-reviews svg:not(:root) {
-    overflow: hidden;
-}
-
-
-/* ==========================================================================
-Figures
-========================================================================== */
-
-/*
-.ga-reviews * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
-*/
-
-.ga-reviews figure {
-    margin: 0;
-}
-
-
-/* ==========================================================================
-Forms
-========================================================================== */
-
-/*
-* Corrects margin displayed oddly in IE 6/7.
-*/
-
-.ga-reviews form {
-    margin: 0;
-}
-
-/*
-.ga-reviews * Define consistent border, margin, and padding.
-*/
-
-
-.ga-reviews fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
-}
-
-
-/*
-* 1. Corrects color not being inherited in IE 6/7/8/9.
-* 2. Corrects text not wrapping in Firefox 3.
-* 3. Corrects alignment displayed oddly in IE 6/7.
-*/
-
-
-
-.ga-reviews legend {
-    border: 0; /* 1 */
-    padding: 0;
-    white-space: normal; /* 2 */
-    *margin-left: -7px; /* 3 */
-
-}
-
-
-/*
-* 1. Corrects font size not being inherited in all browsers.
-.ga-reviews * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
-* and Chrome.
-* 3. Improves appearance and consistency in all browsers.
-*/
-
-
-
-.ga-reviews button,
-.ga-reviews input,
-.ga-reviews select,
-.ga-reviews textarea {
-    font-size: 100%; /* 1 */
-    margin: 0; /* 2 */
-    vertical-align: baseline; /* 3 */
-    *vertical-align: middle; /* 3 */
-
-}
-
-
-/*
-* Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
-* the UA stylesheet.
-*/
-
-.ga-reviews button,
-.ga-reviews input {
-    line-height: normal;
-}
-
-
-/*
-* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-* and `video` controls.
-* 2. Corrects inability to style clickable `input` types in iOS.
-* 3. Improves usability and consistency of cursor style between image-type
-* `input` and others.
-* 4. Removes inner spacing in IE 7 without affecting normal text inputs.
-* Known issue: inner spacing remains in IE 6.
-*/
-
-
-
-.ga-reviews button,
-.ga-reviews html input[type="button"], /* 1 */
-.ga-reviews input[type="reset"],
-.ga-reviews input[type="submit"] {
-    -webkit-appearance: button; /* 2 */
-    cursor: pointer; /* 3 */
-    *overflow: visible; /* 4 */
-}
-
-/*
-* Re-set default cursor for disabled elements.
-*/
-
-.ga-reviews button[disabled],
-.ga-reviews input[disabled] {
-    cursor: default;
-}
-
-
-/*
-* 1. Addresses box sizing set to content-box in IE 8/9.
-* 2. Removes excess padding in IE 8/9.
-* 3. Removes excess padding in IE 7.
-* Known issue: excess padding remains in IE 6.
-*/
-
-
-
-.ga-reviews input[type="checkbox"],
-.ga-reviews input[type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
-    *height: 13px; /* 3 */
-    *width: 13px; /* 3 */
-}
-
-
-/*
-* 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
-* 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
-* (include `-moz` to future-proof).
-*/
-
-
-
-.ga-reviews input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; /* 2 */
-    box-sizing: content-box;
-}
-
-
-/*
-* Removes inner padding and search cancel button in Safari 5 and Chrome
-* on OS X.
-*/
-
-.ga-reviews input[type="search"]::-webkit-search-cancel-button,
-.ga-reviews input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-/*
-* Removes inner padding and border in Firefox 3+.
-*/
-
-
-.ga-reviews button::-moz-focus-inner,
-.ga-reviews input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
-
-/*
-* 1. Removes default vertical scrollbar in IE 6/7/8/9.
-* 2. Improves readability and alignment in all browsers.
-*/
-
-.ga-reviews textarea {
-    overflow: auto; /* 1 */
-    vertical-align: top; /* 2 */
-}
-
-
-/* ==========================================================================
-Tables
-========================================================================== */
-
-/*
-* Remove most spacing between table cells.
-*/
-
-
-
-.ga-reviews table {
-    border-collapse: collapse;
-    border-spacing: 0;
 }
 
 /*=====================================================================*/
@@ -550,7 +59,7 @@ Tables
 /*=====================================================================*/
 
 .ga-reviews {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif  !important;
 }
 
 aside.ga-reviews {
@@ -560,7 +69,7 @@ aside.ga-reviews {
 .widget.ga-reviews {
     padding: 0 !important;
     margin-top: 23px !important;
-    border-radius: 5px;
+    border-radius: 5px !important;
 }
 
 .light.ga-reviews {
@@ -569,15 +78,15 @@ aside.ga-reviews {
 }
 
 .ga-reviews a {
-    border: none;
+    border: none !important;
 }
 
 .ga-reviews a:hover {
-    border: none;
+    border: none !important;
 }
 
 .entry-content .ga-reviews {
-    margin: 10px 20px;
+    margin: 10px 20px !important;
 }
 
 .ga-reviews ul {
@@ -588,25 +97,25 @@ aside.ga-reviews {
 /*=====================================================================*/
 /* ga-widget-container */
 /*=====================================================================*/
-.ga-widget-container.dark {
-	color: white !important;
-	background-color: #1E2326 !important;
+.ga-reviews .ga-widget-container.dark {
+    color: white !important;
+    background-color: #1E2326 !important;
 }
 
-.ga-widget-container.light {
-	color: #1E2326 !important;
-	background-color: white !important;
+.ga-reviews .ga-widget-container.light {
+    color: #1E2326 !important;
+    background-color: white !important;
 }
 
-.ga-widget-container.ga-average {
+.ga-reviews .ga-widget-container.ga-average {
  font-size: 11pt !important;
 }
 
-.ga-widget-container {
+.ga-reviews .ga-widget-container {
  font-size: 11pt !important;
 }
 
-.dark.ga-compact .ga-widget-container {
+.ga-reviews.dark.ga-compact .ga-widget-container {
  border-radius: 5px !important;
 }
 
@@ -615,26 +124,29 @@ aside.ga-reviews {
     text-align: center !important;
 }
 
-.ga-widget-container {
-    margin: 0 auto;
-    border-radius: 8px;
+.ga-reviews .ga-widget-container {
+    margin: 0 auto !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
 }
 
 /*=====================================================================*/
 /* ga-review-container */
 /*=====================================================================*/
-.ga-review-container {
-	width: 90% !important;
-	margin: 0 auto !important;
+.ga-reviews .ga-review-container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
-.ga-compact .ga-review-container {
-    max-height: 300px;
-    overflow-y: auto;
+.ga-reviews.ga-compact .ga-review-container {
+    max-height: 300px !important;
+    overflow-y: auto !important;
+    height: 100%;
 }
 .light .ga-review-container .ga-review:last-of-type {
-    border: none;
+    border: none !important;
 }
-.ga-compact .ga-review-container {
+.ga-reviews.ga-compact .ga-review-container {
     width: 100% !important;
 }
 
@@ -642,165 +154,171 @@ aside.ga-reviews {
 /*=====================================================================*/
 /* ga-review-  */
 /*=====================================================================*/
-.ga-compact .ga-review {
-	height: 250px !important;
-	
+.ga-reviews.ga-compact .ga-review {
+    min-height: 230px !important;
 }
 
-.ga-wide .ga-review-average {
-	width: 90% !important;
-	margin: 0 auto !important;
+.ga-reviews.ga-wide .ga-review-average {
+    width: 90% !important;
+    margin: 0 auto !important;
 }
 
-.widget .ga-review-average h3 {
-    padding-top: 0;
+.ga-reviews.widget .ga-review-average h3 {
+    padding-top: 0 !important;
 }
 
-.ps-container .ga-review {
-	margin-right: 15px !important;
+.ga-reviews .error.ga-review {
+    height: 50px !important;
+    min-height: 50px !important;
+    text-align: center;
 }
 
-.ga-compact .ga-review {
-	overflow-y: auto !important;
-	max-height: 250px !important;
+.ga-reviews .ps-container .ga-review {
+    margin-right: 15px !important;
 }
 
-.dark .ga-review{
-	border-bottom: 1px solid #666 !important;
+.ga-reviews.ga-compact .ga-review {
+    overflow-y: auto !important;
+    max-height: 250px !important;
 }
 
-.light .ga-review{
-	border-bottom: 1px dotted #1E2326 !important;
+.ga-reviews.dark .ga-review{
+    border-bottom: 1px solid #666 !important;
 }
 
-.ga-review h2 {
-	text-align: center !important;
-	font-size: 15pt !important;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
-	margin: 0 !important;
-	font-weight: 600 !important;
-	margin-top: 0px !important;
+.ga-reviews.light .ga-review{
+    border-bottom: 1px dotted #B3B3B3 !important;
 }
 
-.dark .ga-review h2 {
-	color: #ddd !important;
+.ga-reviews .ga-review h2 {
+    text-align: center !important;
+    font-size: 15pt !important;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+    margin-top: 0px !important;
 }
 
-.light .ga-review h2 {
-	color: #1E2326 !important;
+.ga-reviews.dark .ga-review h2 {
+    color: #ddd !important;
 }
 
-.ga-review h2 .ga-note-emphasis {
-	color: #DA3466 !important;
-	/*font-size: 25pt !important;
-	line-height: 12px !important;*/
+.ga-reviews.light .ga-review h2 {
+    color: #1E2326 !important;
 }
 
-.ga-hide-all {
-	display: none;
+.ga-reviews .ga-review h2 .ga-note-emphasis {
+    color: #DA3466 !important;
+    line-height: 21pt !important;
+    /*font-size: 25pt !important;
+    line-height: 12px !important;*/
 }
 
-.ga-show-all-link, .ga-hide-all-link {
-	font-weight: bold !important;
-	cursor: pointer !important;
+.ga-reviews div.ga-hide-all, .ga-reviews span.ga-hide-all {
+    display: none;
 }
 
-.ga-note-hidden {
-	display: none;
+.ga-reviews .ga-show-all-link,.ga-reviews  .ga-hide-all-link {
+    font-weight: bold !important;
+    cursor: pointer !important;
 }
 
-.ga-content {
-	font-size: 11pt !important;
-	text-align: center !important;
-	padding-left: 15px !important;
-	padding-right: 15px !important;
+.ga-reviews .ga-note-hidden {
+    display: none;
 }
 
-.ga-country img {
+.ga-reviews .ga-content {
+    font-size: 11pt !important;
+    text-align: center !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.ga-reviews .ga-country img {
     vertical-align: middle !important;
     background: none !important;
 }
 
-.ga-review blockquote {
-	width: 100% !important;
-	margin: 0 auto !important;
-	font-style: normal !important;
+.ga-reviews .ga-review blockquote {
+    width: 100% !important;
+    margin: 0 auto !important;
+    font-style: normal !important;
     background: none !important;
     padding: 0 !important;
 }
 
-.dark .ga-subcat {
-    color: white;
+.ga-reviews.dark .ga-subcat {
+    color: white !important;
 }
 
-.dark div {
+.ga-reviews.dark div {
     background-color: #1E2326 !important;
 }
-.light .ga-subcat {
-    color: #222;
+.ga-reviews.light .ga-subcat {
+    color: #222 !important;
 }
 
-.ga-review {
-	padding: 8px 0 !important;
+.ga-reviews .ga-review {
+    padding: 8px 0 !important;
 }
 
-.ga-comment-short, .ga-comment-full {
-	text-align: justify !important;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
-	font-size: 10pt !important;
+.ga-reviews .ga-comment-short,.ga-reviews  .ga-comment-full {
+    text-align: justify !important;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+    font-size: 10pt !important;
 }
 
-.dark .ga-comment-short,.dark .ga-comment-full {
-	color: white;
+.ga-reviews.dark .ga-comment-short,.ga-reviews.dark .ga-comment-full {
+    color: white !important;
 }
 
-.white .ga-comment-short,.white .ga-comment-full {
-	color: #444;
+.ga-reviews.light .ga-comment-short,.ga-reviews.light .ga-comment-full {
+    color: #444 !important;
 }
 
-.ga-comment-short {
-	margin-bottom: 10px !important;
+.ga-reviews .ga-comment-short {
+    margin-bottom: 10px !important;
 }
 
-.ga-opening-quote, .ga-closing-quote {
-	color: #DA3466 !important;
-	font-size: 24pt !important;
-	font-weight: bold !important;
-	line-height: 12px !important;
-	font-family: "Garamond", "Georgia", "serif" !important;
+.ga-reviews .ga-opening-quote,.ga-reviews  .ga-closing-quote {
+    color: #DA3466 !important;
+    font-size: 24pt !important;
+    font-weight: bold !important;
+    line-height: 12px !important;
+    font-family: "Garamond", "Georgia", "serif" !important;
     background: none !important;
 }
 
-.ga-opening-quote {
-	margin-right: 5px !important;
-	position: relative !important;
-	top: 12px !important;
+.ga-reviews .ga-opening-quote {
+    margin-right: 5px !important;
+    position: relative !important;
+    top: 12px !important;
 }
 
-.fa-subratings ul {
-    margin-bottom: 0;
+.ga-reviews .fa-subratings ul {
+    margin-bottom: 0 !important;
 }
 
-.ga-closing-quote {
-	margin-left: 5px !important;
-	position: relative !important;
-	bottom: -14px !important;
+.ga-reviews .ga-closing-quote {
+    margin-left: 5px !important;
+    position: relative !important;
+    bottom: -14px !important;
 }
 
-.ga-review-info h3 {
-	font-size: 9pt !important;
-	display: inline-block;
-	margin: 0 !important;
-	color: #ccc !important;
-	font-weight: normal !important;
+.ga-reviews .ga-review-info h3 {
+    font-size: 9pt !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    color: #ccc !important;
+    font-weight: normal !important;
 }
 
-.light .ga-review-info h3 {
-	color: #1E2326 !important;
+.ga-reviews.light .ga-review-info h3 {
+    color: #1E2326 !important;
 }
 
-.ga-review-info .ga-country img {
-	height: 24px !important;
+.ga-reviews .ga-review-info .ga-country img {
+    height: 24px !important;
 }
 
 .ga-reviews img {
@@ -808,135 +326,135 @@ aside.ga-reviews {
     border-radius: 0px !important;
 }
 
-.ga-review-info {
-	text-align: right !important;
-	font-size: 9pt !important;
-	clear: both !important;
+.ga-reviews .ga-review-info {
+    text-align: right !important;
+    font-size: 9pt !important;
+    clear: both !important;
 }
 
-.dark .ga-review-info {
-	color: #ddd !important;
+.ga-reviews.dark .ga-review-info {
+    color: #ddd !important;
 }
 
-.ga-subratings {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
-	font-size: 11pt !important;
-	text-align: right !important;
+.ga-reviews div.ga-subratings {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+    text-align: right !important;
+    padding: 0 !important;
 }
 
-.ga-subratings ul {
-	list-style-type: none; !important;
+.ga-reviews .ga-subratings *{
+    font-size: 13px !important;
 }
 
-.ga-subratings ul, .ga-subratings ul li {
-	padding-left: 0 !important;
-	margin-left: 0 !important;
+.ga-reviews .ga-subratings ul {
+    list-style-type: none !important;
 }
 
-.ga-subrating {
-	
-	clear: both !important;
+.ga-reviews .ga-subratings ul, .ga-subratings ul li {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
 }
 
-.ga-subrating.ga-note-hidden {
-	display: none;
+.ga-reviews .ga-subrating {
+    clear: both !important;
 }
 
-.ga-note-stars {
-	text-align: right !important;
-	float: right !important;
+.ga-reviews .ga-subrating.ga-note-hidden {
+    display: none;
 }
 
-.ga-note {
-	display: inline-block;
-	font-weight: bold !important;
-	color: #DA3466 !important;
-	padding-right: 10px !important;
+.ga-reviews .ga-note-stars {
+    text-align: right !important;
+    display: inline !important;
 }
 
-.ga-subcat {
-	font-weight: bold !important;
-	float: left !important;
-	display: inline-block;
-	text-align: left !important;
+.ga-reviews .ga-note {
+    display: inline-block !important;
+    font-weight: bold !important;
+    color: #DA3466 !important;
+    padding-right: 10px !important;
 }
 
-.ga-review-info div {
-    display: inline-block;
+.ga-reviews .ga-subcat {
+    font-weight: bold !important;
+    float: left !important;
+    display: inline-block !important;
+    text-align: left !important;
 }
 
-.ga-note-stars-global {
-	display: block;
-	margin: 0 auto !important;
-	text-align: center !important;
+.ga-reviews .ga-review-info div {
+    display: inline-block !important;
+}
+
+.ga-reviews .ga-note-stars-global {
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
 }
 
 
-.ga-review-perfectable {
-	position: relative !important;
-	height: 350px !important;
-	overflow-y: hidden !important;
+.ga-reviews .ga-review-perfectable {
+    position: relative !important;
+    height: 350px !important;
+    overflow-y: hidden !important;
 }
 
-.ga-source {
-	text-align: center !important;
-    border-radius: 8px;
-    padding-top: 8px;
+.ga-reviews .ga-source {
+    text-align: center !important;
+    border-radius: 8px !important;
+    padding-top: 8px !important;
 }
 
-.ga-logo {
-	display: block;
-	margin: 0 auto !important;
+.ga-reviews .ga-logo {
+    display: block !important;
+    margin: 0 auto !important;
 }
 .ga-seal {
-	display: inline-block;
-	float: left !important;
-	margin-left: 30px !important;
-	margin-top: -5px !important;
+    display: inline-block;
+    float: left !important;
+    margin-left: 30px !important;
+    margin-top: -5px !important;
 }
 
-.ga-seal img {
-	width: 32px !important;
+.ga-reviews .ga-seal img {
+    width: 32px !important;
 }
 
-aside .ga-note-stars {
-	font-size: 8pt !important;
+aside.ga-reviews .ga-note-stars {
+    font-size: 8pt !important;
 }
 
 .ga-reviews {
-    clear: both;
-}
-
-li.ga-subrating {
-    list-style-type: none;
+    clear: both !important;
 }
 
 /*=====================================================================*/
 /*  Perfect Scrollbar  */
 /*=====================================================================*/
 
-.ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-x-rail {
+.ga-reviews .ps-container .ps-scrollbar-x,.ga-reviews  .ps-container .ps-scrollbar-x-rail {
     display: none !important;
 }
 
-.ps-container .ps-scrollbar-y-rail {
-	margin-top: 10px !important;
+.ga-reviews .ps-container .ps-scrollbar-y-rail {
+    margin-top: 10px !important;
    border-radius: 0 !important;
    width: 3px !important;
 }
 
-.dark .ps-container .ps-scrollbar-y-rail {
-	background-color: #000 !important;
-	opacity: 1 !important;
+.ga-reviews.dark .ps-container .ps-scrollbar-y-rail {
+    background-color: #000 !important;
+    opacity: 1 !important;
 }
 
-.light .ps-container .ps-scrollbar-y-rail {
-	opacity: 1 !important;
+.ga-reviews.light .ps-container .ps-scrollbar-y-rail {
+    opacity: 1 !important;
 }
 
-.ps-container .ps-scrollbar-y {
-	background-color: #DA3466 !important;
-	width: 3px !important;
+.ga-reviews .ps-container .ps-scrollbar-y {
+    background-color: #DA3466 !important;
+    width: 3px !important;
    border-radius: 0 !important;
    opacity: 1 !important;
 }
@@ -944,156 +462,117 @@ li.ga-subrating {
 /*=====================================================================*/
 /*  Compact widget */
 /*=====================================================================*/
-.ga-compact.ga-inline-widget {
-	width: 400px !important;
+.ga-reviews.ga-compact.ga-inline-widget {
+    width: 400px !important;
 }
 
-.ga-compact .ga-review {
-	margin-right: 0 !important;
-	border-bottom: none !important;
+.ga-reviews.ga-compact .ga-review {
+    margin-right: 0 !important;
+    border-bottom: none !important;
 }
 
-.dark .liquid-slider {
-	background-color: #1E2326 !important;
-	border-radius: 5px !important;
+.ga-reviews.dark .liquid-slider {
+    background-color: #1E2326 !important;
+    border-radius: 5px !important;
 }
 
-.ga-review-average h3 {
-	text-align: center !important;
-    margin-top: 0;
-    padding-top: 10px;
+.ga-reviews .ga-review-average h3 {
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 14pt !important;
 }
 
-.dark .ga-review-average h3 {
-    color: white;
+.ga-reviews .ga-source a {
+    background-color: none !important;
 }
 
-.light .ga-review-average h3 {
-    color: #222;
+.ga-reviews.ga-wide .ga-note-emphasis {
+    color: #DA3466 !important;
 }
 
-.ga-review-average h2 {
-	text-align: center !important;
-	font-size: 16pt !important;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
-	margin: 0 !important;
-	font-weight: 600 !important;
-	margin-top: 10px !important;
-	color: #ddd !important;
-}
-
-.light .ga-review-average h2 {
-	color: #1E2326 !important;
-}
-
-.ga-source a {
-    background-color: none;
-}
-
-.ga-wide .ga-note-emphasis {
-	color: #DA3466 !important;
-}
-
-.ga-wide.widget .ga-note-emphasis {
+.ga-reviews.ga-wide.widget .ga-note-emphasis {
     font-size: 14px !important;
 }
 
-.ga-review-average .ga-show-all, .ga-hide-all {
-    clear: both;
+.ga-reviews .ga-review-average .ga-show-all,.ga-reviews  .ga-hide-all {
+    clear: both !important;
 }
 
-.ga-review-average {
-    border-radius: 8px;
-    padding-bottom: 10px;
+.ga-reviews .ga-review-average {
+    border-radius: 8px !important;
+    padding-bottom: 10px !important;
 }
 
-.ga-subratings .ga-note-emphasis {
+.ga-reviews .ga-subratings .ga-note-emphasis {
     font-size: 18px !important;
-    font-weight: bold;
+    font-weight: bold !important;
     color: #DA3466 !important;
 }
 
-.ga-review-average h2.ga-rate-average-num .ga-note-emphasis {
-    color: #DA3466 !important;
-    font-size: 21pt;
-}
-
-.widget .ga-note-emphasis {
+.ga-reviews.widget .ga-note-emphasis {
     font-weight: 16px !important;
 }
 
-.ga-rate-average-stars {
-	display: block;
-	text-align: center !important;
+.ga-reviews .ga-rate-average-stars {
+    display: block !important;
+    text-align: center !important;
 }
 
-.ga-rate-average-num {
-    font-weight: bold;
-    padding-right: 10px;
+.ga-reviews .ga-rate-average-num {
+    font-weight: bold !important;
+    padding-right: 10px !important;
 }
 
-.widget .ga-rate-average-num {
+.ga-reviews.widget .ga-rate-average-num {
     font-size: 14px !important;
 }
 
-.dark .ga-rate-average-num {
-    color: white;
+.ga-reviews.dark .ga-rate-average-num {
+    color: white !important;
 }
 
-.light .ga-rate-average-num {
-    color: #222;
+.ga-reviews.light .ga-rate-average-num {
+    color: #222 !important;
 }
 
-.light .ga-rate-average-stars {
-	color: #1E2326 !important;
+.ga-reviews.light .ga-rate-average-stars {
+    color: #1E2326 !important;
 }
 
-.ga-stay-type {
-	display: inline;
-	font-size: 11pt !important;
+.ga-reviews .ga-stay-type {
+    display: inline !important;
+    font-size: 11pt !important;
 }
 
-.ga-stay-count {
-	text-align: center !important;
-	display: block;
-	font-size: 11px !important;
+.ga-reviews .ga-stay-count {
+    text-align: center !important;
+    display: block !important;
+    font-size: 11px !important;
 }
 
-.ls-responsive .liquid-slider {
-	background-color: white !important;
+.ga-reviews .ls-responsive .liquid-slider {
+    background-color: white !important;
 }
 
-.dark .ls-responsive .liquid-slider {
-	background-color: #1E2326 !important;
+.ga-reviews.dark .ls-responsive .liquid-slider {
+    background-color: #1E2326 !important;
 }
 
-.widget li.ga-subrating {
-	padding: 0 !important;
+.ga-reviews.widget li.ga-subrating {
+    padding: 0 !important;
 }
 
-.widget .ga-subcat {
-	font-size: 11px !important;
+.ga-reviews.widget .ga-subcat {
+    font-size: 11px !important;
 }
 
-.widget {
-    padding-top: 10px;
+.ga-reviews.widget {
+    padding-top: 10px !important;
 }
 
-.widget .ga-review-average h3 {
-    padding-top: 15px;
-}
-
-.light .ga-review-average .ga-note-emphasis {
+.ga-reviews.light .ga-review-average .ga-note-emphasis {
     color: #DA3466 !important;
-}
-
-.ga-wide.widget h2 .ga-note-emphasis {
-    font-size: 24px !important;
-}
-
-.widget h2 {
-    margin-bottom: 15px;
-    font-size: 16px !important;
 }
 
 /*=====================================================================*/
@@ -1101,20 +580,20 @@ li.ga-subrating {
 /*=====================================================================*/
 
 #TB_ajaxContent {
-	margin: 0 auto !important;
-	height: 90% !important;
-    overflow-y: auto;
+    margin: 0 auto !important;
+    height: 90% !important;
+    overflow-y: auto !important;
 }
 
 #guestapp-widget-preview {
-	max-width: 80% !important;
-	padding-bottom: 50px !important;
+    max-width: 80% !important;
+    padding-bottom: 50px !important;
 }
 
 
 #review-amount {
-	width: 100% !important;
-	display: inline-block;
+    width: 100% !important;
+    display: inline-block !important;
 }
 
 /*=====================================================================*/
@@ -1122,44 +601,51 @@ li.ga-subrating {
 /*=====================================================================*/
 
 aside .panel-wrapper {
-	padding: 15px 10px !important;
-    padding-top: 0 !important;
+    padding: 0 10px 15px 10px !important;
 }
 
-.arrows .liquid-slider {
+.ga-reviews .arrows .liquid-slider {
   /* /*Margin between slider and arrows */
-  margin: 0 !important !important;
+  margin: 0 !important;
 }
 
-.panel-wrapper {
-	padding: 15px 5px !important !important;
-    border-radius: 8px;
+.ga-reviews .panel-wrapper {
+    padding: 0 !important;
+    border-radius: 8px !important;
 }
 
-.ls-wrapper {
-    border-radius: 8px;
+.ga-reviews .ls-wrapper {
+    border-radius: 8px !important;
 }
 
 [class$="-arrow"] {
-	margin-top: 20px !important !important;
-	margin-left: 5px !important;
-	margin-right: 5px !important;
+    margin-top: 20px  !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
 }
 
-.ls-responsive .ls-nav-right-arrow, .ls-responsive .ls-nav-left-arrow{
-	bottom: 0 !important;
+.ga-reviews .ls-responsive .ls-nav-right-arrow, .ls-responsive .ls-nav-left-arrow{
+    bottom: 0 !important;
 }
 
-.ls-responsive .ls-nav-left-arrow {
+.ga-reviews .ls-responsive .ls-nav-left-arrow {
     left: 10px !important;
 }
 
-.ls-responsive .ls-nav-right-arrow {
-    right: 10px !important;
+.ga-reviews .ls-responsive .ls-nav-right-arrow {
+    right: 15px !important;
 }
 
-.sidebar-name .sidebar-name-arrow {
-	background: none !important;
+.ga-reviews .sidebar-name .sidebar-name-arrow {
+    background: none !important;
+}
+
+.ga-reviews.ga-compact .panel-wrapper {
+    padding: 0 !important;
+}
+
+.ga-reviews.ga-compact .ga-review-average {
+    padding: 0 !important;
 }
 
 /*=====================================================================*/
@@ -1167,25 +653,59 @@ aside .panel-wrapper {
 /*=====================================================================*/
 
 .toggle-box-content {
-	display: none;
+    display: none !important;
 }
 
 .toggle-box {
-	width: 100% !important;
-	border: 1px solid #E9E9E9 !important;
-	background-color: white !important;
-	text-indent: 30px !important;
+    width: 100% !important;
+    border: 1px solid #E9E9E9 !important;
+    background-color: white !important;
+    text-indent: 30px !important;
 }
 
 .toggle-box:hover {
-	cursor: pointer !important;
+    cursor: pointer !important;
 }
 
 .toggle-box h3 {
-	display: block;
-	width: 100%;
-	
-	height: 35px;	
-	margin: 0;
-	line-height: 35px !important;
+    display: block !important;
+    width: 100% !important;
+    
+    height: 35px !important;   
+    margin: 0 !important;
+    line-height: 35px !important;
+}
+
+aside .ga-subcat {
+    display: block !important;
+    float: none !important;
+    text-align: center !important;
+}
+
+.ga-reviews .ga-note-container {
+    text-align: right !important;
+}
+
+aside.widget .ga-subcat {
+    font-size: 12px !important;
+}
+
+aside.widget .ga-note-container {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+}
+
+aside.widget .ga-note-container .ga-rate-average-num {
+    text-align: center !important;
+    padding-right: 0 !important;
+}
+
+aside.widget .ga-note-container .ga-note-stars {
+    text-align: center !important;
+    float: none !important;
+    display: inline-block !important;
+    margin-left: 15px !important;
 }

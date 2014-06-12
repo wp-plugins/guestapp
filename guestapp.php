@@ -4,7 +4,7 @@
 Plugin Name: GuestApp
 Plugin URI: http://guestapp.me
 Description: GuestApp Plugin
-Version: 1.1.2
+Version: 1.1.3
 Author: GuestApp
 Author URI: http://guestapp.me
 */

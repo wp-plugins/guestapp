@@ -2,10 +2,8 @@
 //= UI Function
 //=============================================================================
 function toggleNotes(self) {
-	console.log(self);
-
 	// If visible = true, we want to show the items
-	self.siblings('ul').children('.ga-subrating.ga-note-hidden').toggle();
+	self.siblings('.ga-subrating-holder').children('.ga-subrating.ga-note-hidden').toggle();
 	self.siblings(".ga-show-global").toggle();
 	self.siblings(".ga-hide-global").toggle();
 	self.toggle();
@@ -13,7 +11,6 @@ function toggleNotes(self) {
 
 function toggleSubNotes(self, id, popup) {
 	popup = false; // DEBUG
-	console.log(self);
 	if (!popup) {
 		// If visible = true, we want to show the items
 		self.parent().siblings(".ga-comment-short").toggle();
@@ -21,7 +18,7 @@ function toggleSubNotes(self, id, popup) {
 
 		self.parent().siblings(".ga-comment-full").toggle();
 		self.parent().siblings('.ga-comment-full').children(".ga-hide-all").toggle();
-		self.parent().siblings(".ga-subratings").toggle();
+		self.parent().siblings(".ga-subrating").toggle();
 
 		self.parent().toggle();
 		self.toggle();
@@ -156,8 +153,10 @@ jQuery(function(){
 				pauseOnHover: true,
 				dynamicTabs: false,
 				hoverArrows: false,
+				dynamicArrows: false,
 				slideEaseDuration: 500,
 				autoHeight: false,
+				crossLinks: true
 	   		});
 		}
 	});

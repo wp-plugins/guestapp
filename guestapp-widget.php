@@ -224,6 +224,7 @@ class GuestApp_Widget extends WP_Widget {
         $lang        = $isSidebarWidget            ? get_option('guestapp_widget_' . $number . "_lang")  : $instance['lang']; 
         $colorscheme = (!isset($instance['color']) ? get_option("guestapp_widget_" . $number . "_color") : $instance['color']);
         $note        = (!isset($instance['note'])  ? get_option("guestapp_widget_" . $number . "_note") : $instance['note']);
+        $number      = ($number == null) ? GuestApp_Widget::$renderCounter : $number;
         
         $class = "";
         $id = "ga-compact-" . $number;
@@ -244,6 +245,7 @@ class GuestApp_Widget extends WP_Widget {
         }
         else {
             $class="ga-wide";
+
         }
 
         // Getting the reviews, filtered by $lang and $qty if they are set
@@ -307,7 +309,9 @@ class GuestApp_Widget extends WP_Widget {
         }
 
         $out .= render('templates/after_widget.php', array("color" => $colorscheme,
-                                                           "note"  => $note
+                                                           "note"  => $note,
+                                                           "id"     => $id,
+                                                           "compact" => $compact
                                                            ));
         if ($isSidebarWidget) {
             echo $out . "</aside>";
