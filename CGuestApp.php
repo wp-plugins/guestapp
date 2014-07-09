@@ -18,7 +18,7 @@ class GuestApp {
      * @param string $token
      */
     function __construct($token = null) {
-        $this->APIPath = "https://admin.guestapp.me/rest/reviews.json?";
+        $this->APIPath = "https://guestapp.me/rest/reviews.json?";
         //$this->APIPath = "http://guestapp.dev/app_dev.php/rest/reviews.json?"; // DEBUG
         // Et quand je commit ici, ca casse probablement
         $this->token = $token;

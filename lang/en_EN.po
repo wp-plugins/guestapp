@@ -149,11 +149,11 @@ msgid "Refresh"
 msgstr "Refresh"
 
 msgid ""
-"Enter your key (available at <a href='http://admin.guestapp.me'>your "
+"Enter your key (available at <a href='http://guestapp.me'>your "
 "administration dashboard</a>) to be able to retrieve your reviews from Guest "
 "App."
 msgstr ""
-"Enter your key (available at <a href='http://admin.guestapp.me'>your "
+"Enter your key (available at <a href='http://guestapp.me'>your "
 "administration dashboard</a>) to be able to retrieve your reviews from Guest "
 "App."
 

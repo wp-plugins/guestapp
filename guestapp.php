@@ -4,7 +4,7 @@
 Plugin Name: GuestApp
 Plugin URI: http://guestapp.me
 Description: GuestApp Plugin
-Version: 1.1.4
+Version: 1.1.5
 Author: GuestApp
 Author URI: http://guestapp.me
 */
@@ -52,7 +52,7 @@ add_action('admin_init', 'guestapp_admin_init');
  * API Token help message
  */
 function section_one_callback() {
-    _e("Enter your key (available at <a href='http://admin.guestapp.me'>your administration dashboard</a>) to be able to retrieve your reviews from Guest App.", "guestapp");
+    _e("Enter your key (available at <a href='http://guestapp.me'>your administration dashboard</a>) to be able to retrieve your reviews from Guest App.", "guestapp");
 }
 
 /*

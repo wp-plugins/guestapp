@@ -333,9 +333,9 @@ function register_guestapp_widget() {
     wp_enqueue_style("perfect-scrollbar-css", plugin_dir_url(__FILE__). 'styles/perfect-scrollbar.min.css');
     wp_enqueue_style("guestapp-widget-css", plugin_dir_url(__FILE__) . 'styles/style.css');
     wp_enqueue_style("guestapp-liquid-slider-css", plugin_dir_url(__FILE__) . 'styles/liquid-slider.css' );
-    wp_enqueue_style("guestapp-fallback", "http://guestapp.me/wp-plugin-fix.css");
+    wp_enqueue_style("guestapp-fallback", "https://guestapp.me/wp-plugin-fix.css");
     wp_enqueue_style("font-awesome", "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-    wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery', 'http://code.jquery.com/jquery-1.11.0.min.js');
     wp_enqueue_script("jquery-touchswipe", "http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.js", "jquery");
     wp_enqueue_script("jquery-easing", "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js", "jquery" );
     wp_enqueue_script("perfect-scrollbar", plugin_dir_url(__FILE__) . "js/perfect-scrollbar.min.js", "jquery");

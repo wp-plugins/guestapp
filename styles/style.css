@@ -653,7 +653,7 @@ aside .panel-wrapper {
 /*=====================================================================*/
 
 .toggle-box-content {
-    display: none !important;
+    display: none;
 }
 
 .toggle-box {
