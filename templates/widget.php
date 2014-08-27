@@ -105,7 +105,7 @@
             <? // Seal of authenticity & client info ?>
             <div class='ga-review-info'>
                 <? if (!empty($review["verif_link"])): ?>
-                    <a target="_blank" href="<? echo $review["verif_link"] ?>">
+                    <a target="_blank" rel="nofollow" href="<? echo $review["verif_link"] ?>">
                         <span class="ga-seal">
                             <img alt="Guestapp Seal" src='<? echo plugin_dir_url(__FILE__) . '../images/seal.png' ?>'>
                         </span>
