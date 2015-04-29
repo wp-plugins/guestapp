@@ -126,8 +126,8 @@ msgstr "Nourriture"
 msgid "poubelle"
 msgstr "Poubelle"
 
-msgid "Reviews collected by "
-msgstr "Avis collectés par "
+msgid "Reviews verified by "
+msgstr "Avis vérifiés par "
 
 msgid "Last updated"
 msgstr "Dernière mise à jour"

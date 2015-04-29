@@ -17,9 +17,9 @@
             <input type="checkbox" class="lang-selector" id="lang-check-nl" name="lang-nl" value="nl"><label for="lang-check-nl"><img style="height: 16px; position:relative; top: 4px;" src="<? echo $flagNl ?>"><? _e("Dutch", "guestapp") ?></label>
 
             <br>
-            
+
         </div>
-        <h3><? _e("review_count", "guestapp") ?></h3>
+        <h3><? _e("Amount of reviews to show", "guestapp") ?></h3>
         <select class="widefat" id="review-qty">
             <option value="5"><? _e("5 reviews") ?></option>
             <option value="10"><? _e("10 reviews") ?></option>
@@ -27,9 +27,9 @@
             <option value="50"><? _e("50 reviews") ?></option>
             <option value="100"><? _e("100 reviews") ?></option>
         </select><br>
-        
+
         <h3><? _e("Appearance", "guestapp") ?></h3>
-        
+
         <br>
 
         <label>

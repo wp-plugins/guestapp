@@ -130,8 +130,8 @@ msgstr "Food"
 msgid "poubelle"
 msgstr "Trash"
 
-msgid "Reviews collected by "
-msgstr "Reviews collected by"
+msgid "Reviews verified by "
+msgstr "Reviews verified by"
 
 msgid "Last updated"
 msgstr "Last updated"
