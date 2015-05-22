@@ -1,0 +1,345 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GuestApp\n"
+"POT-Creation-Date: 2014-04-22 09:41+0100\n"
+"PO-Revision-Date: 2014-05-30 15:27+0100\n"
+"Last-Translator: Florian Eula <florian@guestapp.me>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../templates/widget_settings.php:18
+msgid "Language"
+msgstr "Language"
+
+#: ../templates/widget_settings.php:21
+msgid "Tout"
+msgstr "Everything"
+
+#: ../templates/widget_settings.php:22
+msgid "German"
+msgstr "German"
+
+#: ../templates/widget_settings.php:23 ../templates/modal_selector.php:6
+msgid "French"
+msgstr "French"
+
+#: ../templates/widget_settings.php:24
+msgid "English"
+msgstr "English"
+
+#: ../templates/widget_settings.php:25
+msgid "Dutch"
+msgstr "Dutch"
+
+#: ../templates/widget_settings.php:26
+msgid "Spanish"
+msgstr "Spanish"
+
+#: ../templates/widget.php:8
+msgid "guestapp_seal"
+msgstr "Approved by Guest App"
+
+#: ../templates/widget.php:48 ../templates/widget-overview.php:42
+msgid "See more..."
+msgstr "See more..."
+
+#: ../templates/widget.php:49
+msgid "See less..."
+msgstr "See less..."
+
+#: ../templates/modal_selector.php:5
+msgid "help_empty_alllang"
+msgstr "Laisser vide pour afficher tous les avis dans toutes les langues"
+
+# Reviews categories
+msgid "bedding"
+msgstr "Bedding"
+
+msgid "comfort"
+msgstr "Comfort"
+
+msgid "There are no reviews to display."
+msgstr "There are no reviews to display"
+
+msgid "infrastructure"
+msgstr "Infrastructure"
+
+msgid "service"
+msgstr "Service"
+
+msgid "valueForMoney"
+msgstr "Value for money"
+
+msgid "cleanliness"
+msgstr "Cleanliness"
+
+msgid "location"
+msgstr "Location"
+
+msgid "rooms"
+msgstr "Rooms"
+
+msgid "spa"
+msgstr "Spa"
+
+msgid "pool"
+msgstr "Pool"
+
+msgid "breakfast"
+msgstr "Breakfast"
+
+msgid "atmosphere"
+msgstr "Atmosphere"
+
+msgid "scenery"
+msgstr "Scenery"
+
+msgid "cooking"
+msgstr "Cooking"
+
+msgid "price"
+msgstr "Price"
+
+msgid "sport"
+msgstr "Sport"
+
+msgid "entertainment"
+msgstr "Entertainment"
+
+msgid "charm"
+msgstr "Charm"
+
+msgid "traiteur"
+msgstr "Delicatessen"
+
+msgid "accueil"
+msgstr "Reception"
+
+msgid "musique"
+msgstr "Music"
+
+msgid "organisation"
+msgstr "Organisation"
+
+msgid "nourriture"
+msgstr "Food"
+
+msgid "poubelle"
+msgstr "Trash"
+
+msgid "Reviews verified by "
+msgstr "Reviews verified by"
+
+msgid "Last updated"
+msgstr "Last updated"
+
+msgid "Review"
+msgstr "Review"
+
+msgid "Data"
+msgstr "Data"
+
+msgid "Secret identification key"
+msgstr "Secret identification key"
+
+msgid "Refresh"
+msgstr "Refresh"
+
+msgid ""
+"Enter your key (available at <a href='http://guestapp.me'>your "
+"administration dashboard</a>) to be able to retrieve your reviews from Guest "
+"App."
+msgstr ""
+"Enter your key (available at <a href='http://guestapp.me'>your "
+"administration dashboard</a>) to be able to retrieve your reviews from Guest "
+"App."
+
+msgid "Appearance"
+msgstr "Appearance"
+
+msgid "value_for_money"
+msgstr "Value for money"
+
+msgid "Theme"
+msgstr "Theme"
+
+msgid "Set the appearance of your widgets"
+msgstr "Set the appearance of your widgets"
+
+msgid "Cannot reach the Guest App API."
+msgstr "Cannot reach the Guest App API."
+
+msgid "Synchronize reviews now."
+msgstr "Synchronize reviews now."
+
+msgid "Never"
+msgstr "Never"
+
+msgid "Dark"
+msgstr "Dark"
+
+msgid "Light"
+msgstr "Light"
+
+msgid ""
+"Your secret identification key has not been validated by the API. Please "
+"check that you have entered the correct secret identification key."
+msgstr ""
+"Your secret identification key has not been validated by the API. Please "
+"check that you have entered the correct secret identification key."
+
+msgid "Displays reviews from Guest App"
+msgstr "Displays reviews from Guest App"
+
+msgid "The shortcode you used is malformed"
+msgstr "The shortcode you used is malformed"
+
+msgid "Cannot retrieve the reviews."
+msgstr "Cannot retrieve the reviews."
+
+msgid "There are no reviews yet."
+msgstr "There are no reviews yet."
+
+msgid "There is an error in the server's response."
+msgstr "There is an error in the server's response."
+
+msgid "Amount of reviews to show"
+msgstr "Amount of reviews to show"
+
+msgid "Widget type"
+msgstr "Widget type"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Advanced settings"
+msgstr "Widget type"
+
+msgid "Compact"
+msgstr "Compact"
+
+msgid "Do not show averages"
+msgstr "Do not show averages"
+
+msgid "Average note"
+msgstr "Average note"
+
+msgid "Insert"
+msgstr "Insert"
+
+msgid "Everything"
+msgstr "Everything"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "family"
+msgstr "Family"
+
+msgid "solo"
+msgstr "Alone"
+
+msgid "business"
+msgstr "Business"
+
+msgid "friend"
+msgstr "With friends"
+
+msgid "romantic"
+msgstr "Romantic"
+
+msgid "Next automatic update"
+msgstr "Next automatic update"
+
+msgid "Note display"
+msgstr "Note display"
+
+msgid "Stars"
+msgstr "Stars"
+
+msgid "Note"
+msgstr "Note"
+
+msgid "Notes & Stars"
+msgstr "Notes & Stars"
+
+msgid "5 reviews"
+msgstr "5 reviews"
+
+msgid "10 reviews"
+msgstr "10 reviews"
+
+msgid "30 reviews"
+msgstr "30 reviews"
+
+msgid "50 reviews"
+msgstr "50 reviews"
+
+msgid "100 reviews"
+msgstr "100 reviews"
+
+msgid "Preview"
+msgstr "Preview"
+
+msgid "Average rate on"
+msgstr "Average rate on"
+
+msgid "animation"
+msgstr "Animation"
+
+msgid "activities"
+msgstr "Activities"
+
+msgid "welcome_quality"
+msgstr "Welcome quality"
+
+msgid "disabled_access"
+msgstr "Disabled access"
+
+msgid "room_service"
+msgstr "Room service"
+
+msgid "bungalow"
+msgstr "Bungalow"
+
+msgid "mobile_home"
+msgstr "Mobile home"
+
+msgid "bar"
+msgstr "Bar"
+
+msgid "balcony"
+msgstr "Balcony"
+
+msgid "concierge"
+msgstr "Concierge"
+
+msgid "air_conditioning"
+msgstr "Air conditioning"
+
+msgid "bathroom"
+msgstr "Bathroom"
+
+msgid "nursery"
+msgstr "Nursery"
+
+msgid "parking"
+msgstr "Parking"
+
+msgid "beach_equipment"
+msgstr "Beach equipment"
+
+msgid "tranquility"
+msgstr "Tranquility"
+
+msgid "restrooms"
+msgstr "Restrooms"
+
+msgid "child_friendly"
+msgstr "Child friendly"
+
+msgid "restaurant"
+msgstr "Restaurant"

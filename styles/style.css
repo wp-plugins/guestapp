@@ -1,0 +1,711 @@
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+HTML5 display definitions
+========================================================================== */
+
+/*
+* Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+*/
+
+/****************************************************************************************
+ ** CSS Reset
+ ** Please use the following elements *only* in the templates : 
+ **  * span
+ **  * div
+ **  * i (font-awesome)
+ **  * p
+ **  * aside (in the case of a sidebar widget)
+ **  * img
+ ** 
+ ** Every other element can (and will) be overriden by the site's local CSS
+ ** If problems persist, inline styles shall be used (and honestly, noone wants that)
+ ** 
+ ** TODO : Override every possible property !important;
+ ***************************************************************************************/
+
+ /* Also overrides div.ga-reviews, aside.ga-reviews */
+.ga-reviews, .ga-reviews div {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;   
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif !important;
+    box-shadow: none !important;
+}
+
+.ga-reviews p {
+    border: none !important; 
+    margin: 0 !important;   
+    box-shadow: none !important;
+}
+
+.ga-reviews span {
+
+}
+
+.ga-reviews i {
+
+}
+
+/*=====================================================================*/
+
+/* ga-reviews  */
+
+/*=====================================================================*/
+
+.ga-reviews {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif  !important;
+}
+
+aside.ga-reviews {
+    width: auto !important;
+}
+
+.widget.ga-reviews {
+    padding: 0 !important;
+    margin-top: 23px !important;
+    border-radius: 5px !important;
+}
+
+.light.ga-reviews {
+    box-shadow: 0px 0px 5px 2px #E9E9E9 !important;
+    border-radius: 5px !important;
+}
+
+.ga-reviews a {
+    border: none !important;
+}
+
+.ga-reviews a:hover {
+    border: none !important;
+}
+
+.entry-content .ga-reviews {
+    margin: 10px 20px !important;
+}
+
+.ga-reviews ul {
+    margin-bottom: 0 !important;
+}
+
+
+/*=====================================================================*/
+/* ga-widget-container */
+/*=====================================================================*/
+.ga-reviews .ga-widget-container.dark {
+    color: white !important;
+    background-color: #1E2326 !important;
+}
+
+.ga-reviews .ga-widget-container.light {
+    color: #1E2326 !important;
+    background-color: white !important;
+}
+
+.ga-reviews .ga-widget-container.ga-average {
+ font-size: 11pt !important;
+}
+
+.ga-reviews .ga-widget-container {
+ font-size: 11pt !important;
+}
+
+.ga-reviews.dark.ga-compact .ga-widget-container {
+ border-radius: 5px !important;
+}
+
+.ga-compact .ga-slider-sidebar--panel.error {
+    padding: 16px 0 !important;
+    text-align: center !important;
+}
+
+.ga-reviews .ga-widget-container {
+    margin: 0 auto !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
+}
+
+/*=====================================================================*/
+/* ga-review-container */
+/*=====================================================================*/
+.ga-reviews .ga-review-container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.ga-reviews.ga-compact .ga-review-container {
+    max-height: 300px !important;
+    overflow-y: auto !important;
+    height: 100%;
+}
+.light .ga-review-container .ga-review:last-of-type {
+    border: none !important;
+}
+.ga-reviews.ga-compact .ga-review-container {
+    width: 100% !important;
+}
+
+
+/*=====================================================================*/
+/* ga-review-  */
+/*=====================================================================*/
+.ga-reviews.ga-compact .ga-review {
+    min-height: 230px !important;
+}
+
+.ga-reviews.ga-wide .ga-review-average {
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+.ga-reviews.widget .ga-review-average h3 {
+    padding-top: 0 !important;
+}
+
+.ga-reviews .error.ga-review {
+    height: 50px !important;
+    min-height: 50px !important;
+    text-align: center;
+}
+
+.ga-reviews .ps-container .ga-review {
+    margin-right: 15px !important;
+}
+
+.ga-reviews.ga-compact .ga-review {
+    overflow-y: auto !important;
+    max-height: 250px !important;
+}
+
+.ga-reviews.dark .ga-review{
+    border-bottom: 1px solid #666 !important;
+}
+
+.ga-reviews.light .ga-review{
+    border-bottom: 1px dotted #B3B3B3 !important;
+}
+
+.ga-reviews .ga-review h2 {
+    text-align: center !important;
+    font-size: 15pt !important;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+    margin-top: 0px !important;
+}
+
+.ga-reviews.dark .ga-review h2 {
+    color: #ddd !important;
+}
+
+.ga-reviews.light .ga-review h2 {
+    color: #1E2326 !important;
+}
+
+.ga-reviews .ga-review h2 .ga-note-emphasis {
+    color: #DA3466 !important;
+    line-height: 21pt !important;
+    /*font-size: 25pt !important;
+    line-height: 12px !important;*/
+}
+
+.ga-reviews div.ga-hide-all, .ga-reviews span.ga-hide-all {
+    display: none;
+}
+
+.ga-reviews .ga-show-all-link,.ga-reviews  .ga-hide-all-link {
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+
+.ga-reviews .ga-note-hidden {
+    display: none;
+}
+
+.ga-reviews .ga-content {
+    font-size: 11pt !important;
+    text-align: center !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.ga-reviews .ga-country img {
+    vertical-align: middle !important;
+    background: none !important;
+    border: none !important;
+}
+
+.ga-reviews .ga-review blockquote {
+    width: 100% !important;
+    margin: 0 auto !important;
+    font-style: normal !important;
+    background: none !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.ga-reviews.dark .ga-subcat {
+    color: white !important;
+}
+
+.ga-reviews.dark div {
+    background-color: #1E2326 !important;
+}
+.ga-reviews.light .ga-subcat {
+    color: #222 !important;
+}
+
+.ga-reviews .ga-review {
+    padding: 8px 0 !important;
+}
+
+.ga-reviews .ga-comment-short,.ga-reviews  .ga-comment-full {
+    text-align: justify !important;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+    font-size: 10pt !important;
+}
+
+.ga-reviews.dark .ga-comment-short,.ga-reviews.dark .ga-comment-full {
+    color: white !important;
+}
+
+.ga-reviews.light .ga-comment-short,.ga-reviews.light .ga-comment-full {
+    color: #444 !important;
+}
+
+.ga-reviews .ga-comment-short {
+    margin-bottom: 10px !important;
+}
+
+.ga-reviews .ga-opening-quote,.ga-reviews  .ga-closing-quote {
+    color: #DA3466 !important;
+    font-size: 24pt !important;
+    font-weight: bold !important;
+    line-height: 12px !important;
+    font-family: "Garamond", "Georgia", "serif" !important;
+    background: none !important;
+}
+
+.ga-reviews .ga-opening-quote {
+    margin-right: 5px !important;
+    position: relative !important;
+    top: 12px !important;
+}
+
+.ga-reviews .fa-subratings ul {
+    margin-bottom: 0 !important;
+}
+
+.ga-reviews .ga-closing-quote {
+    margin-left: 5px !important;
+    position: relative !important;
+    bottom: -14px !important;
+}
+
+.ga-reviews .ga-review-info h3 {
+    font-size: 9pt !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    color: #ccc !important;
+    font-weight: normal !important;
+}
+
+.ga-reviews.light .ga-review-info h3 {
+    color: #1E2326 !important;
+}
+
+.ga-reviews .ga-review-info .ga-country img {
+    height: 24px !important;
+    border: none !important;
+}
+
+.ga-reviews img {
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    border: none !important;
+}
+
+.ga-reviews .ga-review-info {
+    text-align: right !important;
+    font-size: 9pt !important;
+    clear: both !important;
+}
+
+.ga-reviews.dark .ga-review-info {
+    color: #ddd !important;
+}
+
+.ga-reviews div.ga-subratings {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+    text-align: right !important;
+    padding: 0 !important;
+}
+
+.ga-reviews .ga-subratings *{
+    font-size: 13px !important;
+}
+
+.ga-reviews .ga-subratings ul {
+    list-style-type: none !important;
+}
+
+.ga-reviews .ga-subratings ul, .ga-subratings ul li {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.ga-reviews .ga-subrating {
+    clear: both !important;
+}
+
+.ga-reviews .ga-subrating.ga-note-hidden {
+    display: none;
+}
+
+.ga-reviews .ga-note-stars {
+    text-align: right !important;
+    display: inline !important;
+}
+
+.ga-reviews .ga-note {
+    display: inline-block !important;
+    font-weight: bold !important;
+    color: #DA3466 !important;
+    padding-right: 10px !important;
+}
+
+.ga-reviews .ga-subcat {
+    font-weight: bold !important;
+    float: left !important;
+    display: inline-block !important;
+    text-align: left !important;
+}
+
+.ga-reviews .ga-review-info div {
+    display: inline-block !important;
+}
+
+.ga-reviews .ga-note-stars-global {
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+
+.ga-reviews .ga-review-perfectable {
+    position: relative !important;
+    height: 350px !important;
+    overflow-y: hidden !important;
+}
+
+.ga-reviews .ga-source {
+    text-align: center !important;
+    border-radius: 8px !important;
+    padding-top: 8px !important;
+}
+
+.ga-reviews .ga-logo {
+    display: block !important;
+    margin: 0 auto !important;
+}
+.ga-seal {
+    display: inline-block;
+    float: left !important;
+    margin-left: 30px !important;
+    margin-top: -5px !important;
+}
+
+.ga-reviews .ga-seal img {
+    width: 32px !important;
+    border: none !important;
+}
+
+aside.ga-reviews .ga-note-stars {
+    font-size: 8pt !important;
+}
+
+.ga-reviews {
+    clear: both !important;
+}
+
+/*=====================================================================*/
+/*  Perfect Scrollbar  */
+/*=====================================================================*/
+
+.ga-reviews .ps-container .ps-scrollbar-x,.ga-reviews  .ps-container .ps-scrollbar-x-rail {
+    display: none !important;
+}
+
+.ga-reviews .ps-container .ps-scrollbar-y-rail {
+    margin-top: 10px !important;
+   border-radius: 0 !important;
+   width: 3px !important;
+}
+
+.ga-reviews.dark .ps-container .ps-scrollbar-y-rail {
+    background-color: #000 !important;
+    opacity: 1 !important;
+}
+
+.ga-reviews.light .ps-container .ps-scrollbar-y-rail {
+    opacity: 1 !important;
+}
+
+.ga-reviews .ps-container .ps-scrollbar-y {
+    background-color: #DA3466 !important;
+    width: 3px !important;
+   border-radius: 0 !important;
+   opacity: 1 !important;
+}
+
+/*=====================================================================*/
+/*  Compact widget */
+/*=====================================================================*/
+.ga-reviews.ga-compact.ga-inline-widget {
+    width: 400px !important;
+}
+
+.ga-reviews.ga-compact .ga-review {
+    margin-right: 0 !important;
+    border-bottom: none !important;
+}
+
+.ga-reviews.dark .liquid-slider {
+    background-color: #1E2326 !important;
+    border-radius: 5px !important;
+}
+
+.ga-reviews .ga-review-average h3 {
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 14pt !important;
+}
+
+.ga-reviews .ga-source a {
+    background-color: none !important;
+}
+
+.ga-reviews.ga-wide .ga-note-emphasis {
+    color: #DA3466 !important;
+}
+
+.ga-reviews.ga-wide.widget .ga-note-emphasis {
+    font-size: 14px !important;
+}
+
+.ga-reviews .ga-review-average .ga-show-all,.ga-reviews  .ga-hide-all {
+    clear: both !important;
+}
+
+.ga-reviews .ga-review-average {
+    border-radius: 8px !important;
+    padding-bottom: 10px !important;
+}
+
+.ga-reviews .ga-subratings .ga-note-emphasis {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #DA3466 !important;
+}
+
+.ga-reviews.widget .ga-note-emphasis {
+    font-weight: 16px !important;
+}
+
+.ga-reviews .ga-rate-average-stars {
+    display: block !important;
+    text-align: center !important;
+}
+
+.ga-reviews .ga-rate-average-num {
+    font-weight: bold !important;
+    padding-right: 10px !important;
+}
+
+.ga-reviews.widget .ga-rate-average-num {
+    font-size: 14px !important;
+}
+
+.ga-reviews.dark .ga-rate-average-num {
+    color: white !important;
+}
+
+.ga-reviews.light .ga-rate-average-num {
+    color: #222 !important;
+}
+
+.ga-reviews.light .ga-rate-average-stars {
+    color: #1E2326 !important;
+}
+
+.ga-reviews .ga-stay-type {
+    display: inline !important;
+    font-size: 11pt !important;
+}
+
+.ga-reviews .ga-stay-count {
+    text-align: center !important;
+    display: block !important;
+    font-size: 11px !important;
+}
+
+.ga-reviews .ls-responsive .liquid-slider {
+    background-color: white !important;
+}
+
+.ga-reviews.dark .ls-responsive .liquid-slider {
+    background-color: #1E2326 !important;
+}
+
+.ga-reviews.widget li.ga-subrating {
+    padding: 0 !important;
+}
+
+.ga-reviews.widget .ga-subcat {
+    font-size: 11px !important;
+}
+
+.ga-reviews.widget {
+    padding-top: 10px !important;
+}
+
+.ga-reviews.light .ga-review-average .ga-note-emphasis {
+    color: #DA3466 !important;
+}
+
+/*=====================================================================*/
+/*  Thickbox   */
+/*=====================================================================*/
+
+#TB_ajaxContent {
+    margin: 0 auto !important;
+    height: 90% !important;
+    overflow-y: auto !important;
+}
+
+#guestapp-widget-preview {
+    max-width: 80% !important;
+    padding-bottom: 50px !important;
+}
+
+
+#review-amount {
+    width: 100% !important;
+    display: inline-block !important;
+}
+
+/*=====================================================================*/
+/*  LiquidSlider   */
+/*=====================================================================*/
+
+aside .panel-wrapper {
+    padding: 0 10px 15px 10px !important;
+}
+
+.ga-reviews .arrows .liquid-slider {
+  /* /*Margin between slider and arrows */
+  margin: 0 !important;
+}
+
+.ga-reviews .panel-wrapper {
+    padding: 0 !important;
+    border-radius: 8px !important;
+}
+
+.ga-reviews .ls-wrapper {
+    border-radius: 8px !important;
+}
+
+[class$="-arrow"] {
+    margin-top: 20px  !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+.ga-reviews .ls-responsive .ls-nav-right-arrow, .ls-responsive .ls-nav-left-arrow{
+    bottom: 0 !important;
+}
+
+.ga-reviews .ls-responsive .ls-nav-left-arrow {
+    left: 10px !important;
+}
+
+.ga-reviews .ls-responsive .ls-nav-right-arrow {
+    right: 15px !important;
+}
+
+.ga-reviews .sidebar-name .sidebar-name-arrow {
+    background: none !important;
+}
+
+.ga-reviews.ga-compact .panel-wrapper {
+    padding: 0 !important;
+}
+
+.ga-reviews.ga-compact .ga-review-average {
+    padding: 0 !important;
+}
+
+/*=====================================================================*/
+/*  font-awesome   */
+/*=====================================================================*/
+
+.toggle-box-content {
+    display: none;
+}
+
+.toggle-box {
+    width: 100% !important;
+    border: 1px solid #E9E9E9 !important;
+    background-color: white !important;
+    text-indent: 30px !important;
+}
+
+.toggle-box:hover {
+    cursor: pointer !important;
+}
+
+.toggle-box h3 {
+    display: block !important;
+    width: 100% !important;
+    
+    height: 35px !important;   
+    margin: 0 !important;
+    line-height: 35px !important;
+}
+
+aside .ga-subcat {
+    display: block !important;
+    float: none !important;
+    text-align: center !important;
+}
+
+.ga-reviews .ga-note-container {
+    text-align: right !important;
+}
+
+aside.widget .ga-subcat {
+    font-size: 12px !important;
+}
+
+aside.widget .ga-note-container {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+}
+
+aside.widget .ga-note-container .ga-rate-average-num {
+    text-align: center !important;
+    padding-right: 0 !important;
+}
+
+aside.widget .ga-note-container .ga-note-stars {
+    text-align: center !important;
+    float: none !important;
+    display: inline-block !important;
+    margin-left: 15px !important;
+}
