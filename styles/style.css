@@ -47,11 +47,6 @@ HTML5 display definitions
 
 }
 
-.ga-reviews img {
-    box-shadow: none !important;
-
-}
-
 /*=====================================================================*/
 
 /* ga-reviews  */
@@ -237,6 +232,7 @@ aside.ga-reviews {
 .ga-reviews .ga-country img {
     vertical-align: middle !important;
     background: none !important;
+    border: none !important;
 }
 
 .ga-reviews .ga-review blockquote {
@@ -245,6 +241,7 @@ aside.ga-reviews {
     font-style: normal !important;
     background: none !important;
     padding: 0 !important;
+    border: none !important;
 }
 
 .ga-reviews.dark .ga-subcat {
@@ -319,11 +316,13 @@ aside.ga-reviews {
 
 .ga-reviews .ga-review-info .ga-country img {
     height: 24px !important;
+    border: none !important;
 }
 
 .ga-reviews img {
     box-shadow: none !important;
     border-radius: 0px !important;
+    border: none !important;
 }
 
 .ga-reviews .ga-review-info {
@@ -419,6 +418,7 @@ aside.ga-reviews {
 
 .ga-reviews .ga-seal img {
     width: 32px !important;
+    border: none !important;
 }
 
 aside.ga-reviews .ga-note-stars {

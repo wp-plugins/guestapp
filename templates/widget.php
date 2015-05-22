@@ -1,19 +1,21 @@
 <? // Review data
    // Represent a single review by an user 
 ?>
-<div itemscope itemtype="http://data-vocabulary.org/Review" class="ga-review">
+<div itemscope itemtype="http://schema.org/Review" class="ga-review">
     <? // Microformat stuff
        // Those particular properties have to be shown in meta tags, because they are either not shown
        // in the review, or they're not in the right format (like dtreviewed)
     ?>
-    <meta content="0" itemprop="worst">
-    <meta content="10" itemprop="best">
     <meta content="<? echo $review['establishment'] ?>" itemprop="itemreviewed">
-    <meta content="<? echo date('c', $review['timestamp']) ?>" itemprop="dtreviewed">
+    <meta content="<? echo date('c', $review['timestamp']) ?>" itemprop="dateCreated">
 
     <? // See rules about stars, notes & both ?>
     <? if ($note == "both" || $note == "note"): ?>
-        <p style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-weight: bold;"><span style="color: #DA3466; font-size: 1.3em !important;" itemprop="rating" class="ga-note-emphasis"><? echo $review["global_rate"] ?></span>/10</p>
+    <div itemscope itemprop="reviewRating" itemtype="http://schema.org/Rating">
+        <p style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-weight: bold;"><span style="color: #DA3466; font-size: 1.3em !important;" itemprop="ratingValue" class="ga-note-emphasis"><? echo $review["global_rate"] ?></span>/10</p>
+        <meta content="0" itemprop="worstRating">
+        <meta content="10" itemprop="bestRating">
+    </div>
     <? endif ?>
     
     <? if ($note == "both" || $note == "stars"): ?>
@@ -36,7 +38,7 @@
             <div class="ga-comment-short ga-show-all ga-show-all-<? echo $review["id"] ?>">
                 <? // 'Tis but a dirtey hack. Background images are overrated. ?>
                 <span class='ga-opening-quote'>“</span>
-                <span itemprop="summary"><? echo $review["comment_short"] ?></span>
+                <span itemprop="reviewBody"><? echo $review["comment_short"] ?></span>
                 
                 <? // Togglers
                    // Open in a popup if we're in compact mode
@@ -111,8 +113,8 @@
                         </span>
                     </a>
                 <? endif ?>
-                <p style="display: inline-block; margin: 0; font-weight: normal; font-size: 9pt;" itemprop="reviewer" class="ga-client-name"><? echo $review["user_name"] ?></p> - 
-                <div class="date"><? echo date_i18n("d F Y", $review["timestamp"]) ?></div> - 
+                <p style="display: inline-block; margin: 0; font-weight: normal; font-size: 9pt;" itemprop="author" class="ga-client-name"><? echo $review["user_name"] ?></p> - 
+                <div class="ga-date"><? echo date_i18n("d F Y", $review["timestamp"]) ?></div> - 
                 <span class="ga-staytype"><? _e($review["stay_type"], 'guestapp') ?></span> - 
                 <span class="ga-country">
                     <img alt="Flag" src='<? echo plugin_dir_url(__FILE__) . '../images/flag/'.$review["flag"] ?>'>

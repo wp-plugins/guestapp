@@ -4,8 +4,6 @@
     <div itemscope itemtype="http://data-vocabulary.org/Review-aggregate" class="ga-review-average">
         <p style="text-align: center; margin: 0; border: none; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 30px; font-weight: bold;" itemprop="itemreviewed"><? echo $data["establishment_name"] ?></p>
         <div class="ga-rate">
-            <meta content="0" itemprop="worst">
-            <meta content="10" itemprop="best">
             <? //==================================================================================
                // Average rating
                //================================================================================== ?>

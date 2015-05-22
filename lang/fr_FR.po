@@ -282,3 +282,60 @@ msgstr "Prévisualisation"
 
 msgid "Average rate on"
 msgstr "Note moyenne sur"
+
+msgid "animation"
+msgstr "Animation"
+
+msgid "activities"
+msgstr "Activités"
+
+msgid "welcome_quality"
+msgstr "Accueil"
+
+msgid "disabled_access"
+msgstr "Accès handicapé"
+
+msgid "room_service"
+msgstr "Room service"
+
+msgid "bungalow"
+msgstr "Bungalow"
+
+msgid "mobile_home"
+msgstr "Mobile home"
+
+msgid "bar"
+msgstr "Bar"
+
+msgid "balcony"
+msgstr "Balcon"
+
+msgid "concierge"
+msgstr "Concierge"
+
+msgid "air_conditioning"
+msgstr "Climatisation"
+
+msgid "bathroom"
+msgstr "Salle de bain"
+
+msgid "nursery"
+msgstr "Garderie"
+
+msgid "parking"
+msgstr "Parking"
+
+msgid "beach_equipment"
+msgstr "Equipement de plage"
+
+msgid "tranquility"
+msgstr "Tranquilité"
+
+msgid "restrooms"
+msgstr "Toilettes"
+
+msgid "child_friendly"
+msgstr "Adapté aux enfants"
+
+msgid "restaurant"
+msgstr "Restaurant"

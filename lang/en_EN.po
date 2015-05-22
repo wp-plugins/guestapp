@@ -286,3 +286,60 @@ msgstr "Preview"
 
 msgid "Average rate on"
 msgstr "Average rate on"
+
+msgid "animation"
+msgstr "Animation"
+
+msgid "activities"
+msgstr "Activities"
+
+msgid "welcome_quality"
+msgstr "Welcome quality"
+
+msgid "disabled_access"
+msgstr "Disabled access"
+
+msgid "room_service"
+msgstr "Room service"
+
+msgid "bungalow"
+msgstr "Bungalow"
+
+msgid "mobile_home"
+msgstr "Mobile home"
+
+msgid "bar"
+msgstr "Bar"
+
+msgid "balcony"
+msgstr "Balcony"
+
+msgid "concierge"
+msgstr "Concierge"
+
+msgid "air_conditioning"
+msgstr "Air conditioning"
+
+msgid "bathroom"
+msgstr "Bathroom"
+
+msgid "nursery"
+msgstr "Nursery"
+
+msgid "parking"
+msgstr "Parking"
+
+msgid "beach_equipment"
+msgstr "Beach equipment"
+
+msgid "tranquility"
+msgstr "Tranquility"
+
+msgid "restrooms"
+msgstr "Restrooms"
+
+msgid "child_friendly"
+msgstr "Child friendly"
+
+msgid "restaurant"
+msgstr "Restaurant"
