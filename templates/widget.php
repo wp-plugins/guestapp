@@ -6,17 +6,24 @@
        // Those particular properties have to be shown in meta tags, because they are either not shown
        // in the review, or they're not in the right format (like dtreviewed)
     ?>
-    <meta content="<? echo $review['establishment'] ?>" itemprop="itemreviewed">
-    <meta content="<? echo date('c', $review['timestamp']) ?>" itemprop="dateCreated">
 
     <? // See rules about stars, notes & both ?>
-    <? if ($note == "both" || $note == "note"): ?>
     <div itemscope itemprop="reviewRating" itemtype="http://schema.org/Rating">
-        <p style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-weight: bold;"><span style="color: #DA3466; font-size: 1.3em !important;" itemprop="ratingValue" class="ga-note-emphasis"><? echo $review["global_rate"] ?></span>/10</p>
+        <? if ($note == "both" || $note == "note"): ?>
+            <p style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-weight: bold;">
+                <span style="color: #DA3466; font-size: 1.3em !important;" class="ga-note-emphasis">
+                    <? echo $review["global_rate"] ?>
+                </span>
+                /10
+            </p>
+        <? endif ?>
+
+        <meta content="<? echo $review["global_rate"] ?>" itemprop="ratingValue">
         <meta content="0" itemprop="worstRating">
         <meta content="10" itemprop="bestRating">
-    </div>
-    <? endif ?>
+    </div> 
+    <meta content="<? echo $review['establishment'] ?>" itemprop="name">
+    <meta content="<? echo date('c', $review['timestamp']) ?>" itemprop="datePublished">
     
     <? if ($note == "both" || $note == "stars"): ?>
         <div class="ga-note-stars-global">

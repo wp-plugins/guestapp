@@ -1,26 +1,32 @@
     <? //==================================================================================
        // Hotel Overview (average notes)
        //==================================================================================  ?>
-    <div itemscope itemtype="http://data-vocabulary.org/Review-aggregate" class="ga-review-average">
-        <p style="text-align: center; margin: 0; border: none; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 30px; font-weight: bold;" itemprop="itemreviewed">
+    <div itemscope itemtype="http://schema.org/LodgingBusiness" class="ga-review-average">
+        <p style="text-align: center; margin: 0; border: none; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 30px; font-weight: bold;" itemprop="name">
             <? echo $data["establishment_name"] ?>
         </p>
 
-        <div class="ga-rate">
+        <div class="ga-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
             <? //==================================================================================
                // Average rating
                //================================================================================== ?>
             <? 
                 $showNumericRating = ($note == "both" || $note == "note");
-                $numericRatingStyle = $showNumericRating ? "border: none; font-family: 'Open Sans', Helvetica, Arial, sans-serif; line-height: 34px; margin: 0; margin-top: 0px; text-align: center;" : "opacity: 0; font-size: 1px; position: absolute;"
+
+                if ($showNumericRating) :
             ?>
-            <p style="<? echo $numericRatingStyle; ?>" class="ga-rate-average-num" >
-                <span itemprop="rating" style="color: #DA3466; font-weight: bold; font-size: 26px;">
-                    <? echo $data["average"] ?>
-                </span> 
-                / 
-                <span itemprop="best">10</span>
-            </p>
+                <p style="border: none; font-family: 'Open Sans', Helvetica, Arial, sans-serif; line-height: 34px; margin: 0; margin-top: 0px; text-align: center;" class="ga-rate-average-num" >
+                    <span style="color: #DA3466; font-weight: bold; font-size: 26px;">
+                        <? echo $data["average"] ?>
+                    </span> 
+                    / 
+                    <span>10</span>
+                </p>
+            <? endif; ?>
+
+            <meta itemprop="ratingValue" content="<? echo $data["average"] ?>">
+            <meta content="0" itemprop="worstRating">
+            <meta content="10" itemprop="bestRating">
 
             <? //==================================================================================
                // Average stars
@@ -53,10 +59,11 @@
                //==================================================================================  ?>
             <p style="font-size: 11px; font-style: italic; text-align: center;" class="ga-stay-count">
                 <? _e("Average rate on", "guestapp") ?> 
-                <span itemprop="count"><?echo $data['count'] ?></span> 
+                <span itemprop="ratingCount"><?echo $data['count'] ?></span> 
                 <? _e("Review", "guestapp") ?>
             </p>
         </div>
+
         <? //==================================================================================
            // List of subratings
            //==================================================================================  ?>
